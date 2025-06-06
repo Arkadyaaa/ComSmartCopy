@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import SidebarLayout from './SidebarLayout';
 import { useRoute } from '@react-navigation/native';
 import { useState } from 'react';
@@ -8,16 +8,16 @@ export default function HardwareAssembly() {
   const user = route.params?.user;
 
   const assemblySteps = [
-    { step: 'Step 1', title: 'Prepare Your Workspace', description: 'Clear a clean, static-free surface to work on. Gather your tools, especially a Phillips-head screwdriver.' },
-    { step: 'Step 2', title: 'Install the CPU', description: 'Open the CPU socket on the motherboard, align the CPU correctly, and gently place it in. Close the socket latch.' },
-    { step: 'Step 3', title: 'Attach the CPU Cooler', description: 'Place the stock or aftermarket cooler on the CPU and secure it. Connect the cooler’s fan cable to the CPU_FAN header.' },
-    { step: 'Step 4', title: 'Insert the RAM', description: 'Align the notches and press the RAM sticks into the DIMM slots until they click into place.' },
-    { step: 'Step 5', title: 'Install Storage Devices', description: 'Mount SSDs or HDDs in the appropriate bays or M.2 slots. Secure them with screws if needed and connect data/power cables.' },
-    { step: 'Step 6', title: 'Install the Motherboard', description: 'Place the I/O shield in the case, then align the motherboard with standoffs and screw it in.' },
-    { step: 'Step 7', title: 'Mount the Power Supply', description: 'Insert the PSU into the case (usually bottom-rear), secure it, and route the necessary power cables.' },
-    { step: 'Step 8', title: 'Install the GPU', description: 'Insert the graphics card into the top PCIe slot, secure it with screws, and connect any required PCIe power cables.' },
-    { step: 'Step 9', title: 'Connect All Cables', description: 'Connect front panel, power, USB, audio, SATA, and power cables as needed. Refer to the motherboard manual.' },
-    { step: 'Step 10', title: 'Boot and Test', description: 'Connect to a monitor and keyboard. Power on and enter BIOS to check component detection and temperatures.' },
+    { step: 'Step 1', image: null, title: 'Prepare Your Workspace', description: 'Clear a clean, static-free surface to work on. Gather your tools, especially a Phillips-head screwdriver.' },
+    { step: 'Step 2', image: require('../../assets/assembly/MOBO.png'), title: 'Install the CPU', description: 'Open the CPU socket on the motherboard, align the CPU correctly, and gently place it in. Close the socket latch.' },
+    { step: 'Step 3', image: require('../../assets/assembly/RAM.png'), title: 'Insert the RAM', description: 'Align the notches and press the RAM sticks into the DIMM slots until they click into place.' },
+    { step: 'Step 4', image: require('../../assets/assembly/CPU_FAN.png'), title: 'Attach the CPU Cooler', description: 'Place the stock or aftermarket cooler on the CPU and secure it. Connect the cooler’s fan cable to the CPU_FAN header.' },
+    { step: 'Step 5', image: require('../../assets/assembly/M2.png'), title: 'Install Storage Devices', description: 'Mount SSDs or HDDs in the appropriate bays or M.2 slots. Secure them with screws if needed and connect data/power cables.' },
+    { step: 'Step 6', image: null, title: 'Install the Motherboard', description: 'Place the I/O shield in the case, then align the motherboard with standoffs and screw it in.' },
+    { step: 'Step 7', image: null, title: 'Mount the Power Supply', description: 'Insert the PSU into the case (usually bottom-rear), secure it, and route the necessary power cables.' },
+    { step: 'Step 8', image: require('../../assets/assembly/GPU.png'), title: 'Install the GPU', description: 'Insert the graphics card into the top PCIe slot, secure it with screws, and connect any required PCIe power cables.' },
+    { step: 'Step 9', image: null, title: 'Connect All Cables', description: 'Connect front panel, power, USB, audio, SATA, and power cables as needed. Refer to the motherboard manual.' },
+    { step: 'Step 10', image: null, title: 'Boot and Test', description: 'Connect to a monitor and keyboard. Power on and enter BIOS to check component detection and temperatures.' },
   ];
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -42,6 +42,7 @@ export default function HardwareAssembly() {
         <View style={styles.divider} />
 
         <View style={styles.stepContainer}>
+          <Image source={step.image} style={styles.image} />
           <Text style={styles.stepNumber}>{step.step}</Text>
           <Text style={styles.stepTitle}>{step.title}</Text>
           <Text style={styles.stepDescription}>{step.description}</Text>
@@ -87,11 +88,14 @@ const styles = StyleSheet.create({
     marginVertical: 12,
     width: '100%',
   },
+  image: {
+    width: 300,
+    height: 300,
+  },
   stepContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 12,
   },
   stepNumber: {
     fontSize: 20,
