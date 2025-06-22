@@ -1,11 +1,10 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Modal, FlatList, TextInput, Picker, Switch } from 'react-native';
-import { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Modal, FlatList } from 'react-native';
+import { useState } from 'react';
 import SidebarLayout from './SidebarLayout';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Gauge from '../components/Gauge';
 import PartPickerModal from '../components/PartPickerModal';
 import HoverableOpacity from '../components/HoverableOpacity';
-import { getAllParts } from '../../services/apiRecords';
 
 export default function PCRecommendationScreen() {
   const route = useRoute();
@@ -47,42 +46,64 @@ export default function PCRecommendationScreen() {
     },
   };
 
-  const getEmptyComponents = (groupedOptions) =>
-    Object.keys(partImages).map((label) => ({
-      label,
-      value: '',
-      price: 0,
-      image: partImages[label],
-      options: groupedOptions?.[label] || [],
-    }));
+  const partOptions = {
+    MOTHERBOARD: [
+      { value: 'GIGABYTE B550M GAMING X WIFI6', price: 13908, },
+      { value: 'MSI B650 GAMING PLUS WIFI', price: 8866, },
+      { value: 'MSI B760 GAMING PLUS WIFI', price: 9143, },
+    ],
+    GPU: [
+      { value: 'NVIDIA RTX 3060', price: 28482 },
+      { value: 'NVIDIA RTX 4070', price: 75915 },
+      { value: 'RADEON RX 6800', price: 26598 },
+    ],
+    CPU: [
+      { value: 'RYZEN 5 5600', price: 6538 },
+      { value: 'RYZEN 7 5800X', price: 8893 },
+      { value: 'Intel i5 12400F', price: 6040 },
+    ],
+    FAN: [
+      { value: 'Wraith Stealth (Stock)', price: 0 },
+      { value: 'Cooler Master Hyper 212 Black Edition', price: 1662 },
+      { value: 'ARCTIC Liquid Freezer III 360', price: 7757 },
+    ],
+    RAM: [
+      { value: 'Kingston HyperX Fury 8 GB', price: 2942 },
+      { value: 'Corsair Vengeance LPX 16 GB', price: 4600 },
+      { value: 'G.Skill Ripjaws V 32 GB', price: 7900 },
+    ],
+    PSU: [
+      { value: 'CORSAIR CX650M', price: 4433 },
+      { value: 'MSI MAG A750GL PCIE5', price: 6095 },
+      { value: 'Thermaltake Smart', price: 2216 },
+    ],
+    STORAGE: [
+      { value: 'SAMSUNG 870 EVO', price: 5264 },
+      { value: 'Crucial P3 Plus', price: 3435 },
+      { value: 'Seagate BarraCuda', price: 4653 },
+    ],
+    CASE: [
+      { value: 'Fractal Design North', price: 7757 },
+      { value: 'Phanteks XT PRO', price: 3823 },
+      { value: 'Cooler Master MasterBox Q300L', price: 2221 },
+    ],
+  };
 
-  const [partOptions, setPartOptions] = useState({});
-  const [recommendedComponents, setRecommendedComponents] = useState([]);
-  const [components, setComponents] = useState(() => getEmptyComponents({}));
+  const recommendedComponents = Object.entries(partOptions).map(([label, options]) => ({
+    label,
+    value: options[0].value,
+    price: options[0].price,
+    image: partImages[label],
+  }));
 
-  useEffect(() => {
-    async function fetchParts() {
-      try {
-        const grouped = await getAllParts();
-        setPartOptions(grouped);
-
-        const recommended = Object.entries(grouped).map(([label, options]) => ({
-          label,
-          value: options[0]?.value || '',
-          price: options[0]?.price || 0,
-          image: partImages[label],
-        }));
-
-        setRecommendedComponents(recommended);
-        setComponents(getEmptyComponents(grouped));
-      } catch (err) {
-        console.error(err);
-        alert("Failed to load PC parts.");
-      }
-    }
-
-    fetchParts();
-  }, []);
+  const initialComponents = Object.keys(partOptions).map((label) => ({
+    label,
+    value: '',
+    price: 0,
+    image: partImages[label],
+  }));
+  
+  const [components, setComponents] = useState(initialComponents);
   
   const formatPrice = (num) => {
     const rounded = Math.round(num);
@@ -172,8 +193,14 @@ export default function PCRecommendationScreen() {
     setModalVisible(true);
   };
 
+  const handleRecommendButton = () => {
+    setComponents(recommendedComponents);
+    alert('Parts Recommended');
+  };
+
   const handleClearButton = () => {
-    setComponents(getEmptyComponents(partOptions));
+    setComponents(initialComponents);
+    alert('Parts Cleared');
   };
 
   const handleSaveButton = () => {
@@ -184,10 +211,6 @@ export default function PCRecommendationScreen() {
     } else {
       setConfirmModalVisible(true);
     }
-  };
-
-  const handleLoadButton = () => {
-    alert("Build Loaded");
   };
 
   const [confirmModalVisible, setConfirmModalVisible] = useState(false);
@@ -206,95 +229,80 @@ export default function PCRecommendationScreen() {
     });
     setComponents(updatedComponents);
   };
-  
-  const [preferenceModalVisible, setPreferenceModalVisible] = useState(false);
-  const [userBudget, setUserBudget] = useState('');
-  const [useCase, setUseCase] = useState('');
-  const [advanced, setAdvanced] = useState(false);
-  const [userBenchmark, setUserBenchmark] = useState('');
-  const [maxPowerPref, setMaxPowerPref] = useState('');
-
-  const handleRecommendButton = () => {
-    setPreferenceModalVisible(true);
-  };
-
 
   return (
-
     <SidebarLayout activeTab="PC Recommendation" user={user}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        
         <Text style={styles.header}>Recommendations</Text>
         <View style={styles.divider} />
 
-        <View style={styles.grid}>
-          {components.map((item, index) => (
-            <HoverableOpacity
-              outerStyle={styles.partsCard}
-              hoverStyle={styles.partsCardHover}
-              key={index}
-              style={styles.partsCard}
-              onPress={() => handlePartPress(item)}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.label}>{item.label}</Text>
-              <Image source={item.value ? item.image.selected : item.image.empty} style={styles.image} />
-              <Text style={styles.value}>{item.value}</Text>
-              <Text style={styles.label}>{formatPrice(item.price)}</Text>
-            </HoverableOpacity>
-          ))}
-        </View>
-        
-        <View style={styles.grid}>
-          <HoverableOpacity 
-            onPress={handleRecommendButton} 
-            outerStyle={[styles.buttonsCard, styles.recommendButton]}
-            hoverStyle={styles.recommendButtonHover}
-          >
-            <Text style={styles.buttonText}>Recommend</Text>
-          </HoverableOpacity>
-          <HoverableOpacity 
-            onPress={handleClearButton} 
-            outerStyle={[styles.buttonsCard, styles.clearButton]}
-            hoverStyle={styles.clearButtonHover}
-          >
-            <Text style={styles.buttonText}>Clear</Text>
-          </HoverableOpacity>
-        </View>
-        
-        <View style={styles.divider} />
-
-        <View style={styles.totalPriceContainer}>
-          <Text style={styles.totalPrice}>Total Price: {formatPrice(gauges[0].value)}</Text>
-        </View>
-        
-        <View style={styles.gaugeGrid}>
-          {gauges.map((gauges, index) => (
-            <View key={index} style={styles.gaugeCard}>
-              <Text style={styles.gaugeLabel}>{gauges.label}</Text>
-              <Gauge size={gauges.size} value={gauges.value} limit={gauges.limit} max={gauges.max} isPrice={gauges.isPrice} invertColor={gauges.invertColor}/>
+        <View style={styles.mainLayout}>
+          <View style={styles.leftPane}>
+            <View style={styles.partsGrid}>
+              {components.map((item, index) => (
+                <HoverableOpacity
+                  outerStyle={styles.partsCard}
+                  hoverStyle={styles.partsCardHover}
+                  key={index}
+                  onPress={() => handlePartPress(item)}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.label}>{item.label}</Text>
+                  <Image source={item.value ? item.image.selected : item.image.empty} style={styles.image} />
+                  <Text style={styles.value}>{item.value}</Text>
+                  <Text style={styles.label}>{formatPrice(item.price)}</Text>
+                </HoverableOpacity>
+              ))}
             </View>
-          ))}
-        </View>
-        
-        <View style={styles.grid}>
-          <HoverableOpacity 
-            onPress={handleLoadButton} 
-            outerStyle={[styles.buttonsCard, styles.loadButton]}
-            hoverStyle={styles.loadButtonHover}
-          >
-            <Text style={styles.buttonText}>Load Build</Text>
-          </HoverableOpacity>
 
-          <HoverableOpacity 
-            onPress={handleSaveButton} 
-            outerStyle={[styles.buttonsCard, styles.saveButton]}
-            hoverStyle={styles.saveButtonHover}
-          >
-            <Text style={styles.buttonText}>Save Build</Text>
-          </HoverableOpacity>
-        </View>
+            <View style={styles.grid}>
+              <HoverableOpacity
+                onPress={handleRecommendButton}
+                outerStyle={[styles.buttonsCard, styles.recommendButton]}
+                hoverStyle={styles.recommendButtonHover}
+              >
+                <Text style={styles.buttonText}>Recommend</Text>
+              </HoverableOpacity>
+              <HoverableOpacity
+                onPress={handleClearButton}
+                outerStyle={[styles.buttonsCard, styles.clearButton]}
+                hoverStyle={styles.clearButtonHover}
+              >
+                <Text style={styles.buttonText}>Clear</Text>
+              </HoverableOpacity>
+            </View>
 
+            <View style={styles.grid}>
+              <HoverableOpacity
+                onPress={handleSaveButton}
+                outerStyle={[styles.buttonsCard, styles.saveButton]}
+                hoverStyle={styles.saveButtonHover}
+              >
+                <Text style={styles.buttonText}>Save Build</Text>
+              </HoverableOpacity>
+            </View>
+          </View>
+
+          <View style={styles.rightPane}>
+            <View style={styles.totalPriceContainer}>
+              <Text style={styles.totalPrice}>Total Price: {formatPrice(gauges[0].value)}</Text>
+            </View>
+
+            {gauges.map((gauge, index) => (
+              <View key={index} style={styles.gaugeCardVertical}>
+                <Text style={styles.gaugeLabel}>{gauge.label}</Text>
+                <Gauge
+                  size={gauge.size}
+                  value={gauge.value}
+                  limit={gauge.limit}
+                  max={gauge.max}
+                  isPrice={gauge.isPrice}
+                  invertColor={gauge.invertColor}
+                />
+              </View>
+            ))}
+          </View>
+        </View>
       </ScrollView>
     
       <PartPickerModal
@@ -311,7 +319,6 @@ export default function PCRecommendationScreen() {
         formatPrice={formatPrice}
       />
 
-      {/* SAVE BUILD */}
       <Modal
         transparent={true}
         visible={confirmModalVisible}
@@ -349,7 +356,6 @@ export default function PCRecommendationScreen() {
         </View>
       </Modal>
       
-      {/* NO COMPONENTS SELECTED */}
       <Modal
         transparent={true}
         visible={warningModalVisible}
@@ -373,96 +379,6 @@ export default function PCRecommendationScreen() {
         </View>
       </Modal>
 
-      {/* USER PREFERENCE */}
-      <Modal
-        transparent={true}
-        visible={preferenceModalVisible}
-        animationType="fade"
-        onRequestClose={() => setPreferenceModalVisible(false)}
-      >
-        <View style={styles.preferenceModal}>
-          <View style={styles.preferenceModalContent}>
-            <Text style={styles.preferenceModalTitle}>Set Your Preferences</Text>
-
-            <Text style={styles.label}>Budget (₱)</Text>
-            <TextInput
-              style={styles.input}
-              keyboardType="numeric"
-              placeholder="Enter budget"
-              value={userBudget}
-              onChangeText={setUserBudget}
-            />
-
-            <Text style={styles.label}>Use Case</Text>
-            <Picker
-              selectedValue={useCase}
-              style={styles.input}
-              onValueChange={(itemValue) => setUseCase(itemValue)}
-            >
-              <Picker.Item label="Select use case" value="" />
-              <Picker.Item label="Gaming" value="gaming" />
-              <Picker.Item label="Productivity" value="productivity" />
-              <Picker.Item label="Streaming" value="streaming" />
-              <Picker.Item label="General Use" value="general" />
-            </Picker>
-
-            <Text style={styles.label}>Advanced</Text>
-            <Switch
-              value={advanced}
-              onValueChange={setAdvanced}
-              style={styles.preferenceSwitch}
-            />
-
-            {advanced && (
-              <>
-                <Text style={styles.label}>Benchmark Goal</Text>
-                <TextInput
-                  style={styles.input}
-                  keyboardType="numeric"
-                  placeholder="Enter target benchmark"
-                  value={userBenchmark}
-                  onChangeText={setUserBenchmark}
-                />
-
-                <Text style={styles.label}>Max Power Usage</Text>
-                <TextInput
-                  style={styles.input}
-                  keyboardType="numeric"
-                  placeholder="Enter max power usage"
-                  value={maxPowerPref}
-                  onChangeText={setMaxPowerPref}
-                />
-              </>
-            )}
-
-            <View style={styles.confirmModalButtonContainer}>
-              <HoverableOpacity
-                onPress={() => setPreferenceModalVisible(false)}
-                outerStyle={styles.confirmModalCancelButton}
-                hoverStyle={styles.confirmModalCancelButtonHover}
-              >
-                <Text style={styles.confirmModalCancelText}>Cancel</Text>
-              </HoverableOpacity>
-
-              <HoverableOpacity
-                onPress={() => {
-                  setPreferenceModalVisible(false);
-
-                  // Future: you can add logic here to fine-tune selection
-                  setComponents(recommendedComponents); 
-                  alert('Parts Recommended based on preferences');
-                }}
-                outerStyle={styles.confirmModalProceedButton}
-                hoverStyle={styles.confirmModalProceedButtonHover}
-              >
-                <Text style={styles.confirmModalButtonText}>Confirm</Text>
-              </HoverableOpacity>
-            </View>
-          </View>
-        </View>
-      </Modal>
-
-
     </SidebarLayout>
   );
 }
@@ -484,9 +400,28 @@ const styles = StyleSheet.create({
     marginVertical: 12,
     width: '100%',
   },
+  mainLayout: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  leftPane: {
+    flex: 2,
+    paddingRight: 18,
+  },
+  rightPane: {
+    flex: 1,
+    alignItems: 'center',
+  },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  partsGrid: {
+    width: '80%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignSelf: 'center',  
     justifyContent: 'center',
   },
   gaugeGrid: {
@@ -558,12 +493,6 @@ const styles = StyleSheet.create({
   saveButtonHover: {
     backgroundColor: '#b9fba0',
   },
-  loadButton: {
-    backgroundColor: '#659fce',
-  },
-  loadButtonHover: {
-    backgroundColor: '#a0c9fb',
-  },
   recommendButton: {
     backgroundColor: '#FFD305',
   },
@@ -602,6 +531,15 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     textAlign: 'center',
   },
+  gaugeCardVertical: {
+    backgroundColor: '#00000040',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 10,
+    width: '70%',
+    alignItems: 'center',
+    minWidth: 120,
+  },  
   totalPriceContainer: {
     alignItems: 'center',
     alignSelf: 'center',
@@ -610,7 +548,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 10,
     elevation: 2,
-    width: '62%',
+    width: '70%',
   },
   totalPrice: {
     fontWeight: 'bold',
@@ -675,38 +613,5 @@ const styles = StyleSheet.create({
   confirmModalCancelText: {
     fontWeight: 'bold',
     color: '#333',
-  },
-  input: {
-    backgroundColor: '#fff',
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 5,
-    padding: 10,
-    marginVertical: 8,
-    width: '100%',
-  },
-  preferenceModal: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  preferenceModalContent: {
-    width: '40%',
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 5,
-  },
-  preferenceModalTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    textAlign: 'center',
-  },
-  preferenceSwitch: {
-    marginBottom: 20,
   },
 });
