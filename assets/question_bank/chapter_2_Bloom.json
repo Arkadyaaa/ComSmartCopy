@@ -1,0 +1,461 @@
+[
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What is the main software that manages computer hardware and applications?",
+    "choices": ["Format", "Partition", "Operating System", "Bootloader"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What software allows the operating system to communicate with hardware?",
+    "choices": ["Driver", "Firmware", "Compiler", "Debugger"],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which Windows utility displays installed hardware and drivers? ______",
+    "answer": "device manager"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A clean installation removes all existing files and settings.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is commonly used for USB drives?",
+    "choices": ["NTFS", "FAT32", "exFAT", "RAW"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A bootable USB is an example of ______.",
+    "choices": ["SSD", "HDD", "RAM", "Installation media"],
+    "answer": "d"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "The process of preparing a storage device for OS installation is called ______.",
+    "answer": "formatting"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Drivers are optional and not required for hardware to work.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Which system is used to set the boot order before installation?",
+    "choices": ["BIOS", "Task Manager", "Registry Editor", "Control Panel"],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Windows setup uses what tool to guide users during installation?",
+    "choices": ["SSD", "HDD", "Installation Wizard", "USB Hub"],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Windows activation requires a valid ______.",
+    "answer": "product key"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A 64-bit OS can support more memory than a 32-bit OS.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which is the modern replacement for BIOS?",
+    "choices": ["LAN", "POST", "BIOS clock", "UEFI"],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which startup mode loads the OS with minimal drivers?",
+    "choices": ["Recovery mode", "Safe mode", "Boot menu", "Admin panel"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "A section of a storage drive created for installation is called a ______.",
+    "answer": "partition"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "A corrupted driver can cause hardware malfunction.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Which service can automatically install missing drivers?",
+    "choices": ["Windows Update", "Registry Editor", "Disk Cleanup", "CMD"],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is recommended for Windows installation?",
+    "choices": ["MBR", "FAT", "NTFS", "EXT4"],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Changing the ______ in BIOS lets the system boot from USB or DVD.",
+    "answer": "boot order"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "Which tools can help repair startup issues?",
+    "choices": ["CMD", "Recovery drive", "UEFI settings", "All of the above"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "An OS can be installed without storage devices.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which process divides a hard drive into logical sections?",
+    "choices": ["Disk Cleanup", "Defragmentation", "Disk Partitioning", "Firewall"],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Windows installation begins by running ______.",
+    "answer": "setup.exe"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which drive format uses the traditional boot record system?",
+    "choices": ["FAT", "MBR", "NTFS", "RAW"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "A driver update can improve hardware performance.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Where is the safest source for downloading drivers?",
+    "choices": ["Manufacturer’s website", "Task Manager", "File Explorer", "Notepad"],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "A USB configured for OS installation is called a ______.",
+    "answer": "bootable usb"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Which feature helps restore the OS during failures?",
+    "choices": ["Windows Explorer", "Memory Diagnostics Tool", "Disk Manager", "Recovery Mode"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "Installing the wrong driver can cause system instability.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Ubuntu is an example of what operating system?",
+    "choices": ["Android", "iOS", "Linux", "MS-DOS"],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Most driver settings in Windows can be viewed from ______.",
+    "answer": "control panel"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Where can the system time and date be adjusted before boot?",
+    "choices": ["UEFI", "POST", "CMOS", "BIOS setup"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Drivers never need updates after installation.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What file format is commonly used for OS installation images?",
+    "choices": ["SSD", "Installer ISO", "PSU", "GPU"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Installing software often requires ______ privileges.",
+    "answer": "administrator"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "What tool assists in repairing boot issues?",
+    "choices": ["Windows Recovery Environment", "Disk Analyzer", "Firewall", "Screensaver"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Linux distributions can be installed using a bootable USB.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "During installation, users must accept a ______ to proceed.",
+    "answer": "license agreement"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is commonly used in Linux installations?",
+    "choices": ["FAT32", "SWAP", "EXT2", "EXT4"],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Why is a clean installation recommended when changing to a new operating system?",
+    "choices": ["To keep old drivers","To avoid software conflicts","To speed up hardware","To reduce storage size"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Device drivers act as translators between the operating system and hardware components.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "The purpose of activating an operating system is to verify its ______.",
+    "answer": "license"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "What is the main purpose of using Safe Mode in an operating system?",
+    "choices": ["To install games","To load minimal drivers for troubleshooting"," To update BIOS","To format storage devices"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Accepting the license agreement allows the installation process to continue legally.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "A computer fails to detect the bootable USB. What is the MOST likely cause?",
+    "choices": ["Incorrect OS license","Outdated GPU driver","Wrong boot order in BIOS/UEFI","Corrupted system files"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "Why should OS updates be installed after driver installation?",
+    "choices": ["To ensure compatibility and security","To save disk space","To remove licenses","To change BIOS settings"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "Incorrect drivers can cause hardware malfunction.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Analysis",
+    "question": "Missing network drivers prevent OS updates.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Synthesis",
+    "question": "Which sequence is CORRECT for installing an operating system?",
+    "choices": ["Install drivers → Partition disk → Install OS","Create bootable media → Configure BIOS → Install OS","Install applications → Install OS → Update drivers","Format disk → Install antivirus → Install OS"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Synthesis",
+    "question": "Which action BEST prepares a customized installer for multiple users?",
+    "choices": ["Removing licenses","Ignoring user agreement","Disabling updates","Ignoring user agreement"],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Synthesis",
+    "question": "Which components should be included in a portable technician USB?",
+    "choices": ["Games only","OS installer, drivers, portable tools","Music files","System logs only"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Synthesis",
+    "question": "Portable applications do not require installation into the OS registry.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Synthesis",
+    "question": "A technician USB can contain multiple OS installers.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Which source is the SAFEST for downloading device drivers?",
+    "choices": ["Third-party driver sites","Random forums","Manufacturer’s official website","File-sharing platforms"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Which action BEST ensures compliance with software licensing?",
+    "choices": ["Skipping activation","Using cracked installers","Reading and accepting EULA","Sharing product keys"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Which installer type allows applications to run without installation?",
+    "choices": ["OEM installer","Portable application","Network installer","Trial installer"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Which practice BEST ensures quality of OS installation work?",
+    "choices": ["Following installation checklist","Skipping verification","Ignoring errors","Disabling updates"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Using pirated OS installers is acceptable in technical training.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Skipping system updates improves performance.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Accepting the EULA is optional during OS installation.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Evaluation",
+    "question": "Quality checking is unnecessary after OS installation.",
+    "answer": "FALSE"
+  }
+  
+]

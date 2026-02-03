@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Svg, { Circle, G, Path } from 'react-native-svg';
 
-const Gauge = ({ size = 200, strokeWidth = 10, value = 50, limit = 80, max = 100, isPrice = false, invertColor = false }) => {
+const Gauge = ({ size = 200, strokeWidth = 10, value = 50, limit = 80, max = 100, isPrice = false, invertColor = false, displayMax = false }) => {
   const radius = (size - strokeWidth) / 2;
   const center = size / 2;
   const overshootFactor = 1.05; // 10% over
@@ -45,8 +45,8 @@ const Gauge = ({ size = 200, strokeWidth = 10, value = 50, limit = 80, max = 100
 
   const overLimit = value > limit;
 
-  const firstColor = invertColor ? '#68B24E' : '#FF6961'; // green or red
-  const secondColor = invertColor ? '#FF6961' : '#68B24E'; // red or green
+  const firstColor = invertColor ? '#5585b5' : '#FF6961'; // green or red
+  const secondColor = invertColor ? '#FF6961' : '#5585b5'; // red or green
   const valueContainerColor = overLimit ? firstColor : secondColor; // handles the value container
 
 
@@ -89,7 +89,7 @@ const Gauge = ({ size = 200, strokeWidth = 10, value = 50, limit = 80, max = 100
         </G>
       </Svg>
       <View style={[styles.valueContainer, {backgroundColor: valueContainerColor}]}>
-        <Text style={styles.valueText}>{formatValue(value)} / {formatValue(limit)}</Text>
+        <Text style={styles.valueText}>{formatValue(value)} / {formatValue(displayMax ? max : limit)}</Text>
       </View>
     </View>
   );

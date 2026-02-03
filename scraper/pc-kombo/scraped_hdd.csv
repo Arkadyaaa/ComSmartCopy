@@ -1,0 +1,263 @@
+name,capacity,type,unit,form_factor
+HGST Deskstar NAS 0S03661,3,HDD,TB,3.5
+HGST Deskstar NAS 0S03665,4,HDD,TB,3.5
+HGST Deskstar NAS 0S03940,5,HDD,TB,3.5
+HGST Deskstar NAS v2 0S03941,6,HDD,TB,3.5
+Toshiba DT01ACA100 1TB 32MB,1,HDD,TB,3.5
+Toshiba P300 HDWD110EZSTA 1TB 64MB,1,HDD,TB,3.5
+HGST Ultrastar 7K4000,4,HDD,TB,3.5
+HGST Ultrastar He6,6,HDD,TB,3.5
+HGST Ultrastar He8,8,HDD,TB,3.5
+Hitachi HGST Travelstar 5K1000,1,HDD,TB,3.5
+Hitachi HGST Travelstar 7K1000,1,HDD,TB,3.5
+Hitachi HGST Ultrastar 7K4000,2,HDD,TB,3.5
+Seagate Archive Hard Drive ST6000AS0002 6TB 5900rpm 128MB,6,HDD,TB,3.5
+Seagate Archive Hard Drive ST8000AS0002 8TB 5900rpm 128MB,8,HDD,TB,3.5
+Seagate BarraCuda Compute Hard Drive 2 TB,2,HDD,TB,3.5
+Seagate Barracuda Hard Drive,1,HDD,TB,3.5
+Seagate BarraCuda Hard Drive,2,HDD,TB,3.5
+Seagate Barracuda Hard Drive,2,HDD,TB,3.5
+Seagate BarraCuda Hard Drive,3,HDD,TB,3.5
+Seagate Barracuda Hard Drive,4,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 1 TB,1,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 1 TB,1,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 2 TB,2,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 3 TB,3,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 3 TB,3,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 4 TB,4,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 4 TB,4,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 5 TB,5,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 6 TB,6,HDD,TB,3.5
+Seagate BarraCuda Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive,4,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive,6,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive,8,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive 1 TB,1,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive 10 TB,10,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive 12 TB,12,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive 14 TB,14,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive 2 TB,2,HDD,TB,3.5
+Seagate BarraCuda Pro Hard Drive ST8000DM005,8,HDD,TB,3.5
+Seagate Desktop Hard Drive ST3000DM001,3,HDD,TB,3.5
+Seagate Desktop Hard Drive ST5000DM002,5,HDD,TB,3.5
+Seagate Desktop Hard Drive ST6000DM001,6,HDD,TB,3.5
+Seagate Enterprise Capacity ST1000NM0008,1,HDD,TB,3.5
+Seagate Enterprise Capacity ST1000NM0055,1,HDD,TB,3.5
+Seagate Enterprise Capacity ST1000NX0313,1,HDD,TB,3.5
+Seagate Enterprise Capacity ST2000NM0033,2,HDD,TB,3.5
+Seagate Enterprise Capacity ST2000NM0055,2,HDD,TB,3.5
+Seagate Enterprise Capacity ST2000NX0253,2,HDD,TB,3.5
+Seagate Enterprise Capacity ST4000NM0115,4,HDD,TB,3.5
+Seagate Enterprise Capacity ST8000NM0055,8,HDD,TB,3.5
+Seagate Enterprise Hard Drive,3,HDD,TB,3.5
+Seagate Enterprise Hard Drive,4,HDD,TB,3.5
+Seagate Enterprise Hard Drive,6,HDD,TB,3.5
+Seagate Enterprise Hard Drive v5,6,HDD,TB,3.5
+Seagate Enterprise NAS Hard Drive ST2000VN0001 2TB 7200rpm 128MB,2,HDD,TB,3.5
+Seagate Enterprise NAS Hard Drive ST4000VN0001 4TB 7200rpm 128MB,4,HDD,TB,3.5
+Seagate Enterprise NAS Hard Drive ST5000VN0001 5TB 7200rpm 128MB,5,HDD,TB,3.5
+Seagate Enterprise NAS Hard Drive ST6000VN0001 6TB 7200rpm 128MB,6,HDD,TB,3.5
+Seagate Enterprise NAS Hard Drive ST8000NE0001 8TB 7200rpm 128MB,8,HDD,TB,3.5
+Seagate Exos 7E2 Hard Drive 2 TB,2,HDD,TB,3.5
+Seagate Exos 7E8 Hard Drive 2 TB,2,HDD,TB,3.5
+Seagate Exos 7E8 Hard Drive 4 TB,4,HDD,TB,3.5
+Seagate Exos 7E8 Hard Drive 6 TB,6,HDD,TB,3.5
+Seagate Exos 7E8 Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate Exos X10 Hard Drive 10 TB,10,HDD,TB,3.5
+Seagate Exos X14 Hard Drive 12 TB,12,HDD,TB,3.5
+Seagate Exos X16 Hard Drive 12 TB,12,HDD,TB,3.5
+Seagate Exos X16 Hard Drive 14 TB,14,HDD,TB,3.5
+Seagate Exos X16 Hard Drive 16 TB,16,HDD,TB,3.5
+Seagate Exos X16 Hard Drive 18 TB,18,HDD,TB,3.5
+"Seagate Exos X20 Hard Drive
+ 20 TB",20,HDD,TB,3.5
+Seagate FireCuda SSHD,2,HDD,TB,3.5
+Seagate FireCuda SSHD 1 TB,1,HDD,TB,3.5
+Seagate FireCuda SSHD 1 TB,1,HDD,TB,3.5
+Seagate FireCuda SSHD 2 TB,2,HDD,TB,3.5
+Seagate IronWolf Hard Drive,1,HDD,TB,3.5
+Seagate IronWolf Hard Drive,8,HDD,TB,3.5
+Seagate IronWolf Hard Drive,12,HDD,TB,3.5
+Seagate IronWolf Hard Drive 10 TB,10,HDD,TB,3.5
+Seagate IronWolf Hard Drive 12 TB,12,HDD,TB,3.5
+Seagate Ironwolf Hard Drive 14 TB,14,HDD,TB,3.5
+Seagate IronWolf Hard Drive 16 TB,16,HDD,TB,3.5
+Seagate IronWolf Hard Drive 6 TB,6,HDD,TB,3.5
+Seagate IronWolf Hard Drive 6 TB,6,HDD,TB,3.5
+Seagate IronWolf Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate IronWolf NAS Hard Drive ST10000VN0004,10,HDD,TB,3.5
+Seagate IronWolf NAS Hard Drive ST2000VN004,2,HDD,TB,3.5
+Seagate IronWolf NAS Hard Drive ST3000VN007,3,HDD,TB,3.5
+Seagate IronWolf NAS Hard Drive ST4000VN008,4,HDD,TB,3.5
+Seagate IronWolf NAS Hard Drive ST6000VN0041,6,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive,4,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive,6,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive,8,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive,12,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 10 TB,10,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 12 TB,12,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 14 TB,14,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 16 TB,16,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 4 TB,4,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate IronWolf Pro Hard Drive 8 TB,8,HDD,TB,3.5
+"Seagate IronWolf Pro NAS Hard Drive
+ 16 TB",16,HDD,TB,3.5
+Seagate IronWolf Pro NAS Hard Drive ST10000NE0004 10TB 7200rpm 256MB,10,HDD,TB,3.5
+Seagate IronWolf Pro NAS Hard Drive ST2000NE0025 2TB 7200rpm 128MB,2,HDD,TB,3.5
+Seagate IronWolf Pro NAS Hard Drive ST6000NE0021 6TB 7200rpm 256MB,6,HDD,TB,3.5
+Seagate IronWolf Pro NAS Hard Drive ST8000NE0021 8TB 7200rpm 256MB,8,HDD,TB,3.5
+Seagate Mobile Hard Drive,1,HDD,TB,3.5
+Seagate Mobile Hard Drive,2,HDD,TB,3.5
+Seagate NAS Hard Drive ST2000VN000 2TB 5900rpm 64MB,2,HDD,TB,3.5
+Seagate SkyHawk Hard Drive,3,HDD,TB,3.5
+Seagate SkyHawk Hard Drive,10,HDD,TB,3.5
+Seagate SkyHawk Hard Drive 3 TB,3,HDD,TB,3.5
+Seagate SkyHawk Hard Drive 4 TB,4,HDD,TB,3.5
+Seagate SkyHawk Hard Drive 6 TB,6,HDD,TB,3.5
+Seagate Skyhawk Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate SkyHawk Hard Drive 8 TB,8,HDD,TB,3.5
+Seagate SkyHawk Hard Drive ST1000VX005,1,HDD,TB,3.5
+Seagate SkyHawk Hard Drive ST2000VX008,2,HDD,TB,3.5
+Seagate SkyHawk Hard Drive ST6000VX0023,6,HDD,TB,3.5
+Seagate Surveillance Hard Drive,3,HDD,TB,3.5
+Seagate Surveillance Hard Drive ST1000VX000,1,HDD,TB,3.5
+Seagate Surveillance Hard Drive ST1000VX003,1,HDD,TB,3.5
+Seagate Surveillance Hard Drive ST2000VX000,2,HDD,TB,3.5
+Seagate Surveillance Hard Drive ST4000VX000,4,HDD,TB,3.5
+Seagate Surveillance Hard Drive ST8000VX0002,8,HDD,TB,3.5
+Seagate Video 3.5 Hard Drive ST2000VM003,2,HDD,TB,3.5
+Toshiba Cloud Hard Drive MC04ACA200E 2TB 128MB,2,HDD,TB,3.5
+Toshiba Cloud Hard Drive MC04ACA300E 3TB 128MB,3,HDD,TB,3.5
+Toshiba Enterprise MG03SCA300 3TB 64MB SAS,3,HDD,TB,3.5
+Toshiba N300 HDWN160EZSTA 6TB 128MB,6,HDD,TB,3.5
+Toshiba N300 HDWN160UZSVA 6TB 128MB Bulk,6,HDD,TB,3.5
+Toshiba N300 HDWN180EZSTA 8TB 128MB,8,HDD,TB,3.5
+Toshiba N300 HDWN180UZSVA 8TB 128MB Bulk,8,HDD,TB,3.5
+Toshiba N300 HDWQ140EZSTA 4TB 128MB,4,HDD,TB,3.5
+Toshiba N300 HDWQ140UZSVA 4TB 128MB Bulk,4,HDD,TB,3.5
+Toshiba P300 1 TB,1,HDD,TB,3.5
+Toshiba P300 2 TB,2,HDD,TB,3.5
+Toshiba P300 3 TB,3,HDD,TB,3.5
+Toshiba P300 4 TB,4,HDD,TB,3.5
+Toshiba P300 6 TB,6,HDD,TB,3.5
+Toshiba P300 HDWD120EZSTA 2TB 64MB,2,HDD,TB,3.5
+Toshiba P300 HDWD130EZSTA 3TB 64MB,3,HDD,TB,3.5
+"Toshiba SATA 3G, MQ01ABD100",1,HDD,TB,3.5
+"Toshiba SATA 6G, DT01ACA200, 2 TB",2,HDD,TB,3.5
+"Toshiba SATA 6G, DT01ACA300, 3 TB",3,HDD,TB,3.5
+"Toshiba SATA 6G, MD04ACA400",4,HDD,TB,3.5
+Toshiba Surveillance Hard Drive MD03ACA200V 2TB 64MB,2,HDD,TB,3.5
+Toshiba Surveillance Hard Drive MD03ACA300V 3TB 64MB,3,HDD,TB,3.5
+Toshiba Surveillance Hard Drive MD03ACA400V 4TB 64MB,4,HDD,TB,3.5
+Toshiba X300 HDWE140EZSTA 4TB 128MB,4,HDD,TB,3.5
+Toshiba X300 HDWE150EZSTA 5TB 128MB,5,HDD,TB,3.5
+Toshiba X300 HDWE160EZSTA 6TB 128MB,6,HDD,TB,3.5
+Toshiba X300 HDWF180EZSTA 8TB 128MB,8,HDD,TB,3.5
+Toshiba X300 HDWF180UZSVA 8TB 128MB Bulk,8,HDD,TB,3.5
+"Toshiba X300 SATA 6G, 4 TB",4,HDD,TB,3.5
+"Toshiba X300 SATA 6G, 6 TB",6,HDD,TB,3.5
+WD AV-GP WD10EURX,1,HDD,TB,3.5
+WD AV-GP WD20EURX,2,HDD,TB,3.5
+WD AV-GP WD30EURX,3,HDD,TB,3.5
+WD AV-GP WD40EURX,4,HDD,TB,3.5
+WD Black WD4004FZWX,4,HDD,TB,3.5
+WD Black WD6001FZWX,6,HDD,TB,3.5
+WD Blue SSHD WD40E31X,4,HDD,TB,3.5
+WD Blue WD50EZRZ,5,HDD,TB,3.5
+WD Gold WD4002FYYZ,4,HDD,TB,3.5
+WD Gold WD6002FRYZ,6,HDD,TB,3.5
+WD Gold WD8002FRYZ,8,HDD,TB,3.5
+WD Purple NV WD4NPURX,4,HDD,TB,3.5
+WD Purple NV WD6NPURX,6,HDD,TB,3.5
+WD Purple WD10PURX,1,HDD,TB,3.5
+WD Purple WD20PURX,2,HDD,TB,3.5
+WD Purple WD30PURX,3,HDD,TB,3.5
+WD Purple WD40PURX,4,HDD,TB,3.5
+WD Purple WD50PURX,5,HDD,TB,3.5
+WD Purple WD60PURX,6,HDD,TB,3.5
+WD Purple WD80PUZX,8,HDD,TB,3.5
+WD RE WD1004FBYZ,1,HDD,TB,3.5
+WD RE WD5001FSYZ,5,HDD,TB,3.5
+WD RE+ WD5005FRPZ,5,HDD,TB,3.5
+WD RE+ WD6005FRPZ,6,HDD,TB,3.5
+WD Red Pro WD4002FFWX,4,HDD,TB,3.5
+WD Red Pro WD6002FFWX,6,HDD,TB,3.5
+WD Red Pro WD8001FFWX,8,HDD,TB,3.5
+WD Red WD80EFZX,8,HDD,TB,3.5
+Western Blue Mobile 1 TB,1,HDD,TB,3.5
+Western Blue Mobile 2 TB,2,HDD,TB,3.5
+Western Digital Black 1 TB,1,HDD,TB,3.5
+Western Digital Black 2 TB,2,HDD,TB,3.5
+"Western Digital Black 2,5 Zoll",1,HDD,TB,3.5
+Western Digital Black 4 TB,4,HDD,TB,3.5
+Western Digital Black 6 TB,6,HDD,TB,3.5
+Western Digital Blue,6,HDD,TB,3.5
+Western Digital Blue 1 TB,1,HDD,TB,3.5
+Western Digital Blue 1 TB,1,HDD,TB,3.5
+Western Digital Blue 2 TB,2,HDD,TB,3.5
+Western Digital Blue 2 TB,2,HDD,TB,3.5
+"Western Digital Blue 2,5 Zoll",1,HDD,TB,3.5
+Western Digital Blue 3 TB,3,HDD,TB,3.5
+Western Digital Blue 4 TB,4,HDD,TB,3.5
+Western Digital Blue 6 TB,6,HDD,TB,3.5
+Western Digital Gold 1 TB,1,HDD,TB,3.5
+Western Digital Gold 10 TB,10,HDD,TB,3.5
+Western Digital Gold 12 TB,12,HDD,TB,3.5
+Western Digital Gold 14 TB,14,HDD,TB,3.5
+Western Digital Gold 16 TB,16,HDD,TB,3.5
+Western Digital Gold 2 TB,2,HDD,TB,3.5
+Western Digital Gold 4 TB,4,HDD,TB,3.5
+Western Digital Gold 6 TB,6,HDD,TB,3.5
+Western Digital Gold 8 TB,8,HDD,TB,3.5
+"Western Digital Gold, Intellipower",8,HDD,TB,3.5
+"Western Digital Gold, Intellipower",10,HDD,TB,3.5
+Western Digital Purple 8 TB,8,HDD,TB,3.5
+"Western Digital Purple, Intellipower",10,HDD,TB,3.5
+Western Digital RE,2,HDD,TB,3.5
+Western Digital Red 1 TB,1,HDD,TB,3.5
+Western Digital Red 1 TB,1,HDD,TB,3.5
+Western Digital Red 10 TB,10,HDD,TB,3.5
+Western Digital Red 10 TB,10,HDD,TB,3.5
+Western Digital Red 12 TB,12,HDD,TB,3.5
+Western Digital Red 14 TB,14,HDD,TB,3.5
+Western Digital Red 2 TB,2,HDD,TB,3.5
+Western Digital Red 2 TB,2,HDD,TB,3.5
+Western Digital Red 3 TB,3,HDD,TB,3.5
+Western Digital Red 3 TB,3,HDD,TB,3.5
+Western Digital Red 4 TB,4,HDD,TB,3.5
+Western Digital Red 4 TB,4,HDD,TB,3.5
+Western Digital Red 6 TB,6,HDD,TB,3.5
+Western Digital Red 8 TB,8,HDD,TB,3.5
+"Western Digital Red Plus
+ 2 TB",2,HDD,TB,3.5
+"Western Digital Red Plus
+ 3 TB",3,HDD,TB,3.5
+"Western Digital Red Plus
+ 4 TB",4,HDD,TB,3.5
+"Western Digital Red Plus
+ 6 TB",6,HDD,TB,3.5
+"Western Digital Red Plus
+ 8 TB",8,HDD,TB,3.5
+"Western Digital Red Plus
+ 8 TB",8,HDD,TB,3.5
+Western Digital Red Plus 10 TB,10,HDD,TB,3.5
+Western Digital Red Plus 12 TB,12,HDD,TB,3.5
+Western Digital Red Plus 14 TB,14,HDD,TB,3.5
+Western Digital Red Plus 2 TB,2,HDD,TB,3.5
+Western Digital Red Plus 3 TB,3,HDD,TB,3.5
+Western Digital Red Plus 4 TB,4,HDD,TB,3.5
+Western Digital Red Plus 6 TB,6,HDD,TB,3.5
+Western Digital Red Plus 8 TB,8,HDD,TB,3.5
+Western Digital Red Pro 10 TB,10,HDD,TB,3.5
+Western Digital Red Pro 10 TB,10,HDD,TB,3.5
+Western Digital Red Pro 12 TB,12,HDD,TB,3.5
+Western Digital Red Pro 14 TB,14,HDD,TB,3.5
+Western Digital Red Pro 16 TB,16,HDD,TB,3.5
+Western Digital Red Pro 18 TB,18,HDD,TB,3.5
+Western Digital Red Pro 2 TB,2,HDD,TB,3.5
+Western Digital Red Pro 4 TB,4,HDD,TB,3.5
+Western Digital Red Pro 6 TB,6,HDD,TB,3.5
+Western Digital Red Pro 8 TB,8,HDD,TB,3.5
+"Western Digital Red, Intellipower",6,HDD,TB,3.5
+Western Digital SE,5,HDD,TB,3.5

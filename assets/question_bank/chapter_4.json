@@ -1,0 +1,399 @@
+[
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "Troubleshooting",
+      "Formatting",
+      "Partitioning",
+      "Installation"
+    ],
+    "question": "It is the process of diagnosing and resolving problems in a computer system."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter4",
+    "choices": [
+      "Toolkit",
+      "OS installer",
+      "File manager",
+      "Multimeter"
+    ],
+    "question": "Which tool is used to test voltage, current, and continuity in PC components?"
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "Physical inspection",
+      "Software reinstallation",
+      "Diagnostic testing",
+      "Benchmarking"
+    ],
+    "question": "Running memory tests or checking SMART status are examples of ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "POST",
+      "BOOTMGR",
+      "BIOS Flash",
+      "CMOS"
+    ],
+    "question": "The initial hardware check performed when a computer is powered on is called ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter4",
+    "choices": [
+      "Thermal paste",
+      "Overheating",
+      "Incorrect BIOS settings",
+      "Corrupted RAM"
+    ],
+    "question": "A computer that shuts down randomly is most commonly caused by _____."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter4",
+    "choices": [
+      "Faulty storage",
+      "Defective PSU",
+      "Loose RAM",
+      "All of the above"
+    ],
+    "question": "A PC that fails to boot may be caused by which of the following?"
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "Event Viewer",
+      "Disk Cleanup",
+      "Control Panel",
+      "System Restore"
+    ],
+    "question": "Windows errors and system logs can be reviewed using the ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "Keyboard failure",
+      "CMOS battery error",
+      "No boot device found",
+      "OS not genuine"
+    ],
+    "question": "If a hard drive is not detected, the system may display the error message ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter4",
+    "choices": [
+      "Full system reinstall",
+      "Safe Mode",
+      "System Reset",
+      "Windows Update"
+    ],
+    "question": "What Windows boot option loads only essential drivers for diagnostics?"
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "GPU fan",
+      "USB connector",
+      "CMOS battery",
+      "PCI slot"
+    ],
+    "question": "The BIOS/UEFI settings reset to default when this component becomes weak."
+  },
+
+  {
+    "type": "fill",
+    "answer": "SMART",
+    "chapter": "chapter4",
+    "question": "Hard drives use ______ technology to monitor their health and predict failures."
+  },
+  {
+    "type": "fill",
+    "answer": "blue screen of death",
+    "chapter": "chapter4",
+    "question": "A critical Windows system crash is commonly known as ______."
+  },
+  {
+    "type": "fill",
+    "answer": "system restore",
+    "chapter": "chapter4",
+    "question": "Windows can revert system files and settings to an earlier time using ______."
+  },
+  {
+    "type": "fill",
+    "answer": "power supply unit",
+    "chapter": "chapter4",
+    "question": "A computer failing to power on despite working outlets may indicate a faulty ______."
+  },
+  {
+    "type": "fill",
+    "answer": "thermal paste",
+    "chapter": "chapter4",
+    "question": "Poor heat transfer between CPU and heatsink may be caused by dried ______."
+  },
+
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Loose RAM sticks can cause random restarts or failure to boot."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter4",
+    "question": "A clicking sound from a hard drive usually indicates normal performance."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Booting in Safe Mode loads only minimal drivers."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Software conflicts may cause slow system performance."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter4",
+    "question": "A computer cannot overheat if the CPU fan is working at low speed."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter4",
+    "choices": [
+      "PSU failure",
+      "RAM error",
+      "Loose cables",
+      "All of the above"
+    ],
+    "question": "A PC that turns on but does not display anything may be caused by ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "Memory test",
+      "Disk cleanup",
+      "System format",
+      "Driver rollback"
+    ],
+    "question": "Windows includes a built-in ______ tool to diagnose RAM issues."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "RAM slot",
+      "USB port",
+      "SATA cable",
+      "Heat sink clip"
+    ],
+    "question": "Hard drives and SSDs connect to the motherboard using a ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter4",
+    "choices": [
+      "CPU throttling",
+      "Dust accumulation",
+      "Overvoltage",
+      "Drive fragmentation"
+    ],
+    "question": "Desktop PCs may overheat due to ______ inside the case."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "CHKDSK",
+      "Defragment",
+      "Registry Editor",
+      "Task Manager"
+    ],
+    "question": "Which command checks disk errors and attempts repairs?"
+  },
+
+  {
+    "type": "fill",
+    "answer": "driver",
+    "chapter": "chapter4",
+    "question": "A hardware component may not function properly if its ______ is outdated or corrupted."
+  },
+  {
+    "type": "fill",
+    "answer": "diagnostic tools",
+    "chapter": "chapter4",
+    "question": "Technicians use ______ to analyze hardware and software problems."
+  },
+  {
+    "type": "fill",
+    "answer": "overheating",
+    "chapter": "chapter4",
+    "question": "Unexpected shutdowns are often caused by ______ in the CPU or GPU."
+  },
+  {
+    "type": "fill",
+    "answer": "POST error codes",
+    "chapter": "chapter4",
+    "question": "Beeps heard during startup are called ______."
+  },
+  {
+    "type": "fill",
+    "answer": "safe mode",
+    "chapter": "chapter4",
+    "question": "The Windows mode used for diagnosing driver or startup issues is called ______."
+  },
+
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Failing storage devices may cause slow loading and freezing."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter4",
+    "question": "A dirty heatsink improves cooling efficiency."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Power surges can damage internal components of the computer."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter4",
+    "question": "Software troubleshooting cannot fix corrupted system files."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter4",
+    "question": "Replacing the CMOS battery can fix incorrect date and time errors."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "Ping",
+      "Traceroute",
+      "IPConfig",
+      "Netstat"
+    ],
+    "question": "Which command displays network adapter configuration for troubleshooting?"
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter4",
+    "choices": [
+      "Bad sector",
+      "GPU artifacting",
+      "Dead pixel",
+      "Screen calibration"
+    ],
+    "question": "Strange colors or shapes appearing on the screen may indicate ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter4",
+    "choices": [
+      "Network cable",
+      "USB driver",
+      "RAM module",
+      "Hard disk"
+    ],
+    "question": "Unusually loud clicking noises may come from a failing ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter4",
+    "choices": [
+      "Loose video cable",
+      "Wrong resolution",
+      "Low brightness",
+      "Graphics driver update"
+    ],
+    "question": "A blank screen but working PC may be caused by a ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter4",
+    "choices": [
+      "Sudden reboot",
+      "Sluggish mouse",
+      "Burning smell",
+      "Screen flashing"
+    ],
+    "question": "A ______ often indicates overheating or component failure requiring immediate shutdown."
+  },
+  {
+    "type": "fill",
+    "answer": "defragmentation",
+    "chapter": "chapter4",
+    "question": "Reorganizing files on a hard disk for faster access is called ______."
+  },
+  {
+    "type": "fill",
+    "answer": "bios",
+    "chapter": "chapter4",
+    "question": "Incorrect hardware configuration may be fixed by adjusting ______ settings."
+  },
+  {
+    "type": "fill",
+    "answer": "network troubleshooting",
+    "chapter": "chapter4",
+    "question": "Commands like ping and tracert are used in ______."
+  },
+  {
+    "type": "fill",
+    "answer": "system unit",
+    "chapter": "chapter4",
+    "question": "When diagnosing hardware, technicians often start with visual inspection of the ______."
+  },
+  {
+    "type": "fill",
+    "answer": "backup",
+    "chapter": "chapter4",
+    "question": "Before performing risky repairs, always create a data ______."
+  }
+]

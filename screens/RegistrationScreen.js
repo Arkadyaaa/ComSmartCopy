@@ -37,7 +37,7 @@ export default function RegistrationScreen({ navigation }) {
         setAuthStatus('authentication sent');
       }
 
-      await addRecords(username.trim(), password.trim(), userType, emailAddress.trim());
+      await addRecords(username.trim(), userType, emailAddress.trim());
       alert('Registration successful. Please verify your email before logging in.');
       navigation.navigate('Login');
     } catch (error) {
@@ -97,10 +97,10 @@ export default function RegistrationScreen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.radioButton}
-          onPress={() => setUserType('facilitator')}
+          onPress={() => setUserType('tutor')}
         >
-          <Text style={userType === 'facilitator' ? styles.selected : styles.unselected}>
-            Facilitator
+          <Text style={userType === 'tutor' ? styles.selected : styles.unselected}>
+            Tutor
           </Text>
         </TouchableOpacity>
       </View>

@@ -1,0 +1,721 @@
+chipset,benchmark
+Tesla K40m,3143
+Radeon Pro 555,3141
+Radeon R7 360,3128
+Tesla C2070,3121
+Radeon Ryzen 5 7535HS,3118
+Radeon Pro 455,3113
+Radeon Ryzen 7 4800HS,3102
+Radeon 740M,3099
+Matrox LUMA A310FP,3093
+Radeon HD 7790,3090
+GeForce GTX 860M,3088
+GRID T4-2B,3069
+GeForce GTX 560 Ti,3068
+L4-2A,3063
+Radeon R9 260,3048
+EIZO MED-X5000,3038
+Radeon R9 360,3032
+Tesla C2075,3017
+Radeon HD 6990,3014
+FirePro W5100,2989
+Qualcomm Adreno X1-85 GPU,2987
+Snapdragon X Elite - X1E84100 - Qualcomm Adreno GP,2981
+GRID M10-4Q,2977
+GeForce GTX 675MX,2970
+Quadro K1200,2963
+A40-2Q,2960
+FirePro W5000,2956
+GRID K260Q,2949
+Radeon Ryzen 7 PRO 5800H,2945
+Radeon Ryzen 5 Pro 7535U,2940
+Ryzen 9 5900HX with Radeon Graphics,2934
+L40S-1Q,2932
+Custom GPU 0405,2923
+Radeon 660M Ryzen 5 7535HS,2921
+Radeon RX Vega Ryzen 7 5825U,2916
+FirePro W7170M,2899
+Radeon R7 260,2892
+FirePro M6100 FireGL V,2880
+Ryzen 7 PRO 4700G with Radeon Graphics,2880
+Radeon Pro WX 4170,2870
+Radeon Pro V340 MxGPU,2853
+Quadro M1000M,2840
+GRID K280Q,2840
+Radeon HD 6970,2832
+Radeon Ryzen 7 5800H,2825
+Radeon HD 8950,2825
+GeForce MX350,2817
+FirePro 3D V9800,2812
+Quadro K5000M,2805
+Ryzen 7 5800HS with Radeon Graphics,2795
+Radeon R9 M380,2773
+Quadro M620,2771
+GeForce GTX 560,2768
+GeForce GTX 770M,2768
+A10-4Q,2765
+Quadro K4100M,2764
+Ryzen 7 5700G with Radeon Graphics,2757
+NVIDIA A10-4Q,2756
+GRID P4-2B4,2754
+Radeon Ryzen 9 5980HS,2749
+Ryzen 7 5800H with Radeon Graphics,2737
+GRID K2,2737
+Radeon Ryzen 7 PRO 5755G,2733
+FirePro V9800,2727
+FirePro W4300,2723
+Radeon Pro 450,2723
+Quadro K4000,2722
+Ryzen 9 4900H with Radeon Graphics,2714
+Parsec Virtual Display Adapter Ryzen 5 5600GT,2712
+Barco MXRT 5500,2702
+GRID P4-2Q,2693
+GRID M10-2Q,2692
+Quadro 6000,2692
+Radeon RX 550,2684
+Ryzen 7 Pro 4750G with Radeon Graphics,2682
+Radeon Ryzen 5 PRO 6650H,2679
+DisplayLink USB Device Ryzen 7 Pro 7735U,2678
+Ryzen 7 5700GE with Radeon Graphics,2678
+GeForce GTX 465,2654
+FirePro R5000,2647
+Intel Iris Xe,2642
+Radeon 660M Ryzen 5 7533HS,2641
+GRID P6-4A,2639
+MONSTER GeForce GTX 675M,2637
+Radeon Eng Sample: 100-000000285-30_Y,2627
+Radeon Pro WX 4150,2617
+Radeon HD 8770,2607
+Radeon Pro WX 3100,2606
+Snapdragon X Elite - X1E80100 - Qualcomm Adreno GP,2603
+Radeon RX Vega 11 Ryzen 7 3700U,2602
+Snapdragon X Plus - X1P64100 - Qualcomm Adreno GPU,2602
+GeForce GTX 950A,2599
+Radeon Ryzen 7 4700GE,2596
+Radeon Ryzen 9 4950U Mobile,2594
+Radeon HD 6950,2590
+Radeon Ryzen 7 4700G,2586
+Radeon Ryzen 9 4900H,2584
+GeForce GTX 950M,2573
+Snapdragon X Elite - X1E78100 - Qualcomm Adreno GP,2568
+Ryzen 7 PRO 7730U with Radeon Graphics,2567
+Ryzen 5 5600G with Radeon Graphics,2555
+Ryzen 7 PRO 4750GE with Radeon Graphics,2550
+Ryzen 5 5600GE with Radeon Graphics,2547
+GRID K240Q,2541
+GeForce GTX 850M,2538
+Radeon HD 6850 X2,2534
+Ryzen 9 5980HS with Radeon Graphics,2534
+FireStream 9370,2528
+Radeon Ryzen 7 5800HS,2528
+Radeon Ryzen 7 PRO 4750G,2527
+N18E-Q1,2525
+GeForce GTX 650 Ti,2517
+Moore Threads MTT S80,2513
+Ryzen 7 4700GE with Radeon Graphics,2496
+Ryzen 5 PRO 5650G with Radeon Graphics,2481
+Radeon RX Vega 11 Ryzen 5 3350GE,2480
+Radeon Ryzen 5 7430U,2466
+Barco MXRT 5600,2466
+Radeon Ryzen 5 5500GT,2462
+Ryzen 5 PRO 5650GE with Radeon Graphics,2455
+Ryzen 7 PRO 5750GE with Radeon Graphics,2444
+FirePro 3D V8800,2438
+Ryzen 7 7730U with Radeon Graphics,2433
+Radeon Ryzen 5 5600GT,2431
+MirrorOp Virtual Adaptor Ryzen 5 Pro 7535U,2430
+Radeon Ryzen 5 5600GE,2426
+GeForce GT 1030,2419
+FirePro M6100,2417
+Radeon Ryzen 5 PRO 5655G,2415
+Radeon Ryzen 5 5600H,2414
+Radeon Eng Sample: 100-000000252-50_Y,2411
+P106-090,2404
+Radeon Ryzen 7 5825U,2403
+Radeon RX Vega 11 PRD,2402
+Ryzen 7 PRO 5750G with Radeon Graphics,2401
+Radeon Ryzen 7 7730U,2397
+Radeon Ryzen 7 5800U,2396
+GRID M10-1Q,2385
+Radeon Ryzen 7 PRO 4750GE,2382
+Ryzen 5 Pro 4650G with Radeon Graphics,2382
+RadeonT 680M Ryzen 7 6800H,2381
+GeForce MX250,2380
+Radeon RX 550X,2371
+Eng Sample: 100-000000562-40_Y,2370
+Radeon Pro,2366
+GeForce GTX 485M,2360
+GeForce MX330,2359
+FirePro W6150M,2358
+Radeon RX Vega Ryzen 5 5500U,2356
+Ryzen 7 5825U with Radeon Graphics,2351
+Ryzen 7 4800U with Radeon Graphics,2344
+Ryzen 5 4600G with Radeon Graphics,2339
+Radeon Ryzen 5 4600GE with Radeon Graphics,2337
+Radeon R9 M470,2331
+Radeon RX Vega Ryzen 3 5300U,2330
+Ryzen 3 4300GE with Radeon Graphics,2323
+A16-2B,2317
+Radeon Ryzen 7 4800U,2315
+Radeon RX Vega - Renoir Ryzen 3 5300U,2312
+mv video hook driver2,2312
+Ryzen 7 5800U with Radeon Graphics,2310
+Ryzen 5 PRO 4400G with Radeon Graphics,2306
+Ryzen 3 PRO 5350G with Radeon Graphics,2299
+Radeon Ryzen 5 PRO 5650G,2299
+Ryzen 5 5600H with Radeon Graphics,2297
+Radeon HD 5970,2297
+Radeon Ryzen 5 4400G,2296
+Ryzen 7 PRO 5850U with Radeon Graphics,2294
+FirePro V8800,2281
+GeForce GTX 460,2280
+Radeon Ryzen 5 PRO 4400G,2277
+Radeon Ryzen 5 PRO 4655GE,2274
+Radeon Ryzen 7 PRO 7730U,2274
+Radeon Ryzen 7 5800HS Creator Edition,2271
+Radeon HD 6970M,2270
+Ryzen 5 7430U with Radeon Graphics,2270
+Radeon R7 250X,2269
+Radeon Ryzen 7 Microsoft Surface Edition,2268
+Quadro K3100M,2265
+FirePro V7900,2261
+Radeon Ryzen 5 PRO 5650GE,2260
+Radeon Pro WX 3200,2254
+Radeon Ryzen 5 PRO 4655G,2254
+GeForce MX150,2253
+Ryzen 7 9700X 8-Core Processor,2251
+Ryzen 5 7530U with Radeon Graphics,2250
+Radeon 660M Ryzen 3 7335U,2248
+Radeon Ryzen 7 5700U,2241
+Ryzen 7 5700U with Radeon Graphics,2241
+Quadro M600M,2239
+Ryzen 5 5500GT with Radeon Graphics,2224
+GRID P100-1B,2223
+RadeonT 660M,2221
+A16-1B,2220
+Radeon Ryzen 5 7530U,2220
+Quadro K620,2219
+Radeon Vega 11 Ryzen 5 PRO 3350GE,2218
+Radeon Ryzen Embedded V2748,2216
+Radeon HD 6870,2205
+Parsec Virtual Display Adapter Ryzen 7 5825U,2202
+Ryzen 5 5600GT with Radeon Graphics,2201
+Radeon Ryzen 9 7900X 12-Core,2193
+Radeon HD 5870,2191
+Ryzen 7 4700G with Radeon Graphics,2187
+Radeon HD 7770,2176
+Radeon Ryzen 7 PRO 5875U,2174
+Radeon Vega 11 Ryzen 5 PRO 3350G,2172
+Radeon RX Vega 11 Ryzen 5 3400G,2170
+Radeon RX 640,2168
+Ryzen 5 PRO 4650GE with Radeon Graphics,2155
+Radeon Ryzen 3 7335U,2153
+Ryzen 7 Extreme Edition,2152
+GRID P4-1B,2151
+Ryzen 5 5600U with Radeon Graphics,2151
+Radeon Ryzen 7 PRO 4700G,2148
+Ryzen 3 PRO 7330U with Radeon Graphics,2144
+Radeon Ryzen 7 4850U Mobile,2138
+Ryzen 5 4600H with Radeon Graphics,2137
+Radeon Ryzen 9 5900H,2135
+Radeon 550,2132
+VirtualMonitor Device,2131
+GeForce GTX 745,2127
+Radeon Eng Sample: 100-000000146-20_37/30_Y,2124
+Radeon Ryzen 7 PRO 5755GE,2117
+Ryzen 7 4800H with Radeon Graphics,2113
+Radeon Ryzen 5 5625U,2109
+GeForce 945M,2109
+Ryzen 5 5560U with Radeon Graphics,2098
+Radeon RX Vega 11,2098
+Intel G35 Express,2097
+Radeon Ryzen 5 5600U,2096
+Radeon Ryzen 5 PRO 4500U,2078
+GeForce GTX 580M,2074
+Ryzen 3 Pro 4350G with Radeon Graphics,2074
+GRID M6-1Q,2069
+GRID M10-8Q,2068
+Ryzen 7 PRO 5875U with Radeon Graphics,2067
+Radeon RX 540,2064
+Quadro K4000M,2061
+Radeon R9 M385,2061
+Radeon Ryzen 5 Microsoft Surface Edition,2061
+Radeon TM R9 A360,2060
+Quadro 5000M,2060
+Quadro P520,2050
+Parsec Virtual Display Adapter Ryzen 5 3400G,2046
+Radeon Ryzen 5 5500U,2039
+Radeon Ryzen 5 5560U,2036
+Ryzen 7 4700U with Radeon Graphics,2034
+Radeon Ryzen 7 4700U,2032
+Radeon Vega 11 Ryzen 5 PRO 3400G,2031
+Radeon Pro WX 4130,2030
+Ryzen 7 PRO 4750U with Radeon Graphics,2030
+FirePro V7800,2028
+GeForce GTX 765M,2017
+Ryzen 5 PRO 4500U with Radeon Graphics,2008
+GeForce GT 645,2006
+Radeon Vega 8 Mobile Ryzen 5 3500U,2006
+Radeon Ryzen 7 PRO 4750U,2003
+Radeon Ryzen Embedded V2718,1999
+Moore Threads S3000 MTvGPU-1132,1997
+Ryzen 5 5625U with Radeon Graphics,1997
+Radeon R9 M385X,1994
+GeForce GTX 460 SE,1993
+Radeon Ryzen 3 PRO 7335U,1992
+Radeon R9 350,1989
+Intel Iris Pro 580,1986
+Ryzen 5 PRO 5650U with Radeon Graphics,1984
+Radeon R7 + R7 350 Dual,1982
+Ryzen 3 7335U with Radeon Graphics,1980
+GeForce GTX 670MX,1976
+Intel Iris Xe MAX,1972
+Ryzen 5 5500U with Radeon Graphics,1971
+Radeon HD 5850,1965
+Intel Iris Xe MAX 100,1965
+Radeon R7 + HD 7700 Dual,1962
+Quadro 5000,1962
+Qualcomm Adreno 8cx Gen 3,1961
+Radeon HD 7660D + HD 7700 Dual,1958
+GeForce GTX 460 v2,1955
+GeForce GTX 470M,1953
+Radeon Ryzen 3 PRO 5355GE,1952
+Radeon Vega 8 Ryzen 3 3200GE,1951
+Ryzen 3 5300GE with Radeon Graphics,1951
+Ryzen 3 5300G with Radeon Graphics,1947
+Radeon HD 6850,1944
+Radeon Ryzen 9 7900 12-Core,1943
+Radeon RX Vega 11 Ryzen 5 3400GE,1941
+Ryzen 3 PRO 4350GE with Radeon Graphics,1931
+Intel UHD Graphics P630,1928
+Radeon RX 570X,1923
+Radeon HD 7560D + 7700 Dual,1919
+Radeon Ryzen 5 PRO 5675U,1917
+RadeonT RX Vega 11,1917
+Qualcomm Adreno 8cx Gen 3 GPU,1909
+Intel UHD Graphics 770,1907
+Radeon HD 7700-serie,1899
+Radeon RX Vega 10 Ryzen 7 3750H,1899
+Ryzen 5 4600U with Radeon Graphics,1897
+Quadro M520,1896
+GeForce GTX 675M,1895
+RadeonT Vega 8,1894
+Radeon HD 8670D + HD 7700 Dual,1892
+Citrix Indirect Display Adapter,1888
+Radeon R7 450,1887
+GeForce GTX 645,1880
+GeForce GTX 570M,1877
+Radeon Pro WX 2100,1876
+Ryzen 5 PRO 7530U with Radeon Graphics,1875
+FirePro M5100,1874
+Matrox C680 PCIe x16,1874
+Radeon RX 7500,1873
+Intel HD 5600,1869
+Radeon Ryzen 7 7700X 8-Core,1868
+FirePro 3D V7800,1867
+Radeon Vega 11,1865
+Radeon Ryzen Embedded R2544,1865
+Ryzen 5 9600X 6-Core Processor,1859
+Radeon RX Vega 11 Ryzen 7 3750H,1856
+Meta Virtual Monitor Ryzen 5 7600X 6-Core,1854
+Radeon Ryzen 3 PRO 7330U,1853
+GeForce 945A,1852
+Radeon RX Vega 11 Ryzen 5 3350G,1848
+GeForce GTX 560 SE,1847
+Qualcomm Adreno X1-45 GPU,1845
+Firepro W5170M,1841
+FirePro M5100 FireGL V,1839
+GRID M60-0B,1838
+Radeon HD 8570D + HD 7700 Dual,1835
+Ryzen 7 9800X3D 8-Core Processor,1830
+GeForce MX230,1827
+Ryzen 3 PRO 5350GE with Radeon Graphics,1825
+FirePro M6000,1820
+Radeon R9 M360,1820
+GeForce MX130,1814
+Matrox C900 PCIe x16,1812
+Radeon Ryzen 5 7600X3D 6-Core,1811
+Ryzen 5 4500U with Radeon Graphics,1809
+Radeon Ryzen 5 PRO 5655GE,1801
+Radeon Eng Sample: 100-000000149-40_40/30_Y,1801
+Radeon HD 8870M / R9 M270X / M370X,1800
+Ryzen 3 PRO 4200G with Radeon Graphics,1799
+Radeon 610M Ryzen 9 7945HX,1799
+Intel Iris Plus,1796
+Lebo Virtual USB Monitor,1790
+Radeon HD 8670D + 7700 Dual,1789
+Radeon R7 M465X,1787
+Radeon RX Vega 10 Ryzen 5 3500U,1778
+Ryzen 9 9950X 16-Core Processor,1770
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C6 Ryzen,1769
+Radeon Ryzen 9 7900X3D 12-Core,1767
+Radeon Ryzen 7 7800X3D 8-Core,1763
+Radeon RX Vega 11 Processor,1762
+Embedded Radeon E9173,1762
+Radeon R9 M375X,1762
+Intel UHD 770#0x1c005d839205d7e9#,1759
+Intel Iris Pro P580,1755
+GeForce GTX 650,1754
+SQExtFramebufferUmode Device,1752
+Intel Iris Plus 645,1750
+Ryzen 3 PRO 4200GE with Radeon Graphics,1748
+Radeon Eng Sample: 100-000000098-40_39/27_Y,1743
+Radeon HD 5830,1733
+GeForce GTX 670M,1732
+GRID T4-1B,1731
+Ryzen 9 9900X 12-Core Processor,1729
+GeForce GT 755M,1725
+Radeon Ryzen 5 7600 6-Core,1724
+Radeon Ryzen Embedded V2516,1723
+Ryzen 5 PRO 5675U with Radeon Graphics,1720
+Intel Iris Plus 655,1719
+FirePro M6000 Mobility Pro,1712
+Radeon Ryzen 7 7700 8-Core,1709
+Intel UHD Graphics 750,1708
+"@oem27.inf,%winmv2%;mv video hook driver2",1707
+GeForce GTX 760M,1707
+Radeon HD 7750,1703
+Radeon HD 6900M,1701
+Radeon Ryzen 3 PRO 5450U,1701
+FirePro W600,1695
+Ryzen 3 7330U with Radeon Graphics,1693
+Ryzen 3 4300G with Radeon Graphics,1692
+Quadro 5010M,1691
+Ryzen 3 5425U with Radeon Graphics,1691
+Ryzen 5 PRO 4650U with Radeon Graphics,1690
+Radeon E8860,1686
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C2 Ryzen,1681
+Radeon R7 M380,1669
+Intel UHD Graphics P750,1666
+Radeon EPYC 4584PX 16-Core,1662
+Radeon Ryzen 7 PRO 7745 8-Core,1661
+Radeon Eng Sample: 100-000000144-40_38/38_Y,1659
+Radeon R9 M275X,1656
+Quadro P400,1655
+Radeon Vega 8 Ryzen 3 3200G,1655
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C3 Ryzen,1654
+GeForce GTX 480M,1653
+Quadro P500,1653
+Radeon Ryzen 5 7600X 6-Core,1653
+Radeon Ryzen 9 7950X3D 16-Core,1652
+Radeon HD HD7850M,1652
+EIZO Quadro MED-XN31LP,1648
+Radeon Vega 8 Ryzen 5 3550H,1646
+PCI\VEN_1002&DEV_164E&SUBSYS_D0001458&REV_C7 Ryzen,1643
+Radeon HD 8870M,1638
+Quadro K3000M,1635
+Radeon EPYC 4344P 8-Core,1635
+Radeon RX Vega 10,1631
+FirePro M4000 Mobility Pro,1629
+GRID M10-2B,1623
+Radeon EPYC 4484PX 12-Core,1620
+Radeon Ryzen 5 PRO 7645 6-Core,1619
+Ryzen 7 2700U with Radeon Vega,1617
+Ryzen 3 PRO 5450U with Radeon Graphics,1617
+Radeon Ryzen 3 7330U,1613
+Radeon Ryzen 9 PRO 7945 12-Core,1613
+Radeon 610M Ryzen 9 7945HX3D,1612
+Radeon RX Vega11,1605
+Seria Radeon HD 7700,1604
+Ryzen 3 5400U with Radeon Graphics,1601
+Radeon RX 5700m 8GB 256 bit Ryzen 5 5600U,1599
+Intel Iris Plus 650,1599
+Intel Iris Pro P6300,1596
+Radeon RX Vega11 Ryzen 7 3750H,1595
+FirePro M4000,1594
+Quadro K2000D,1591
+Radeon Ryzen 3 5300U,1589
+GeForce GTX 555,1588
+Radeon Vega 9,1588
+Radeon Vega 8 Ryzen 3 PRO 3200GE w/,1586
+Virtual Display Device,1583
+Quadro K2000,1579
+Radeon R9 M275X / M375,1575
+Radeon Athlon Gold PRO 4150GE,1574
+Radeon Vega 8,1573
+Radeon Ryzen 3 5425U,1571
+Radeon Vega 10 Ryzen 7 PRO 3700U w/,1564
+Radeon R9 M370X,1562
+Radeon 610M Ryzen 9 7940HX,1560
+Radeon 630,1558
+GeForce GTX 550 Ti,1557
+Radeon HD 7560D + HD 6670 Dual,1555
+Radeon Ryzen 5 5500H,1551
+Radeon HD 6790,1545
+Radeon HD 8470D + HD 7500 Dual,1545
+Radeon HD 4890,1543
+Ryzen 3 PRO 4300U with Radeon Graphics,1543
+Ryzen 3 5300U with Radeon Graphics,1539
+FirePro V8700,1539
+Radeon Vega 10 Mobile,1535
+Radeon Vega 11 Ryzen 5 PRO 3400GE w/,1534
+Radeon Vega 10,1533
+Intel Iris Pro Graphics 6200,1525
+RTXA5000-6Q,1522
+Intel UHD Graphics 730,1522
+Radeon Vega 9 Ryzen 5 3550H,1517
+GeForce 940MX,1514
+Radeon 540X,1512
+Radeon Ryzen Embedded R2514,1512
+Radeon HD 7870M,1507
+Ryzen 5 2500U with Radeon Vega,1503
+Ryzen 3 PRO 4450U with Radeon Graphics,1501
+Radeon R9 255,1501
+GeForce GTX 285,1501
+Intel UHD Graphics,1500
+Radeon Vega 8 Ryzen 5 PRO 3500U w/,1497
+Radeon Ryzen 3 PRO 5475U,1496
+Radeon Vega 9 Ryzen 5 Microsoft Surface Edition,1496
+FirePro W4100,1494
+Radeon RX Vega 10 Ryzen 7 PRO 3700U w/,1494
+GRID M10-1B,1493
+Radeon HD 6670 + 7660D Dual,1492
+GeForce 845M,1489
+Radeon RX Vega 8,1487
+Radeon HD 7660D + HD 6670 Dual,1485
+Radeon R9 M365X,1482
+Radeon RX Vega 10 Ryzen 7 3700U,1475
+Quadro 4000,1475
+GeForce GT 740,1457
+L4-2B,1452
+GeForce GTX 660M,1448
+Radeon Vega 6 Ryzen 3 3350U,1447
+Radeon Ryzen 5 3550H,1442
+Ryzen 5 PRO 4400GE with Radeon Graphics,1442
+Intel Iris 550,1437
+Radeon HD 8470D + HD 6670 Dual,1436
+Radeon Ryzen Embedded V2546,1435
+Radeon 540,1433
+Intel Iris 650,1433
+Ryzen 3 PRO 5475U with Radeon Graphics,1432
+Radeon Ryzen 3 PRO 4355GE,1432
+Radeon 550X,1431
+Radeon HD 7560D + 7670 Dual,1426
+Radeon EPYC 4244P 6-Core,1424
+Radeon RX Vega11 Ryzen 7 Microsoft Surface Edition,1421
+GeForce MX110,1419
+Radeon Vega 8 Mobile,1418
+Radeon R7 M370,1418
+Radeon Vega 8 Ryzen 5 3500C,1410
+Radeon Vega 8 Ryzen 3 PRO 3200G,1409
+FirePro W5130M,1396
+Radeon HD 4870,1386
+Radeon HD 7560D + HD 7670 Dual,1380
+GeForce GTX 275,1380
+Ryzen 3 4300U with Radeon Graphics,1376
+Radeon EPYC 4564P 16-Core,1375
+Radeon HD 7850M,1373
+Radeon R7 FX-9830P RADEON,1369
+Radeon Eng Sample: 100-000000151-40_38/33_Y,1367
+Quadro K2100M,1367
+FirePro M40003,1364
+Radeon Vega 8 Ryzen 5 3500U,1362
+Radeon HD 8670D + 6670 Dual,1361
+Radeon Vega 6 Ryzen 3 3300U,1358
+Intel Iris Plus 640,1354
+Radeon HD 5770,1347
+Radeon HD 7560D + HD 7700 Dual,1347
+MirrorOp Virtual Adaptor Ryzen 7 PRO 5850U,1345
+FireStream 9270,1341
+LuminonCore IDDCX Adapter,1339
+GeForce GTS 450,1334
+Radeon EPYC 4464P 12-Core,1331
+GeForce GT 750M,1330
+Radeon EPYC 4124P 4-Core,1322
+Radeon HD 8670D + HD 7600 Dual,1318
+FirePro M5950,1314
+Radeon Vega 6,1312
+Radeon HD 4870 X2,1309
+Tesla M2070-Q,1306
+Radeon HD 8790M,1306
+TENSOR 1.0 Driver Intel HD 630,1300
+"Radeon R7 PRO A6-9500 R5, 8 COMPUTE CORES 2C+6G",1293
+Radeon Vega 8 Ryzen 5 3450U,1288
+Radeon Vega 6 Ryzen 3 PRO 3300U w/,1288
+Quadro 4000M,1287
+GeForce GTX 280,1285
+GeForce 930MX,1285
+MxGPU,1282
+Radeon R7 A370,1281
+Fresco Logic IDDCX Adapter,1276
+FirePro 3D V8750,1272
+GRID V100-16Q,1272
+GeForce GTX 560M,1269
+Ryzen3 5300U Ryzen 3 5300U,1268
+Radeon with 3 5300U Ryzen 3 5300U,1266
+Radeon HD 6770,1264
+Intel Iris 540,1264
+Mirage Driver,1261
+Radeon HD 8570D + HD 6670 Dual,1261
+Radeon HD 7560D + HD 7600 Dual,1258
+GeForce 930A,1241
+Quadro 2000 D,1239
+Radeon HD 8570D + 6570 Dual,1239
+GRID P4-2B,1239
+Radeon HD 7660D + 6670 Dual,1238
+GeForce GT 745A,1238
+Radeon HD 7560D + HD 6570 Dual,1237
+Radeon R7 + R5 340 Dual,1235
+Radeon R7 + R7 250 Dual,1232
+FirePro V5900,1232
+FirePro 3D V5800,1232
+Intel UHD Graphics 630,1232
+GeForce GTX 760A,1226
+Intel HD P630,1224
+Radeon HD 8670D + HD 6670 Dual,1222
+Radeon Ryzen 7 3700U,1217
+GeForce GTX 460M,1214
+Quadro FX 5800,1214
+Radeon HD 8790M / R9 M290X,1211
+GeForce GT 1010,1208
+FirePro 3D V8700,1206
+GeForce GTX 260,1205
+N16P-GX,1205
+Radeon HD 7660D + 7540D Dual,1204
+Radeon R9 M270X,1204
+GeForce GTX 295,1201
+GeForce GT 650M,1194
+NVS 810,1192
+Radeon HD 7750M,1191
+Radeon R7 +8G,1191
+Radeon HD 7730,1188
+FirePro M4170,1188
+FirePro V5800,1184
+Quadro M500M,1178
+Intel Iris Pro 5200,1177
+GeForce 830A,1173
+Radeon HD 5750,1170
+Firepro W4190M,1168
+Radeon RX Vega 10 Ryzen 7 3700C,1166
+Quadro K620M,1166
+FireStream 9250,1165
+GeForce GT 640,1165
+Radeon R7 PRO A8-8670E,1163
+Barco MXRT 5400,1161
+Radeon R9 M265X,1159
+GeForce GPU,1159
+Intel Coffee Lake UHD,1158
+Intel HD P530,1156
+Radeon R7 M465,1146
+Radeon R7 A8-7690K,1141
+Radeon HD 8850M / R9 M265X,1140
+Radeon HD 4850 X2,1132
+GeForce 940M,1131
+Radeon HD 7560D + 6670 Dual,1131
+Radeon Ryzen 5 3450U,1130
+Radeon HD 8650G + 7700M Dual,1126
+Radeon R7 M350,1126
+GeForce 840A,1123
+Radeon HD 7660D + 7500 Dual,1121
+GeForce GT 545,1115
+Radeon R9 M275,1115
+Intel HD 630,1113
+GeForce 940A,1107
+Radeon R7 Opteron X3421,1104
+Radeon 610M,1103
+GeForce 840M,1100
+Radeon HD 7660D + 6570 Dual,1100
+Quadro 2100M,1100
+Radeon R7 430,1099
+Radeon R5 PRO A6-9500 2C+6G,1096
+GeForce GT 745M,1093
+GeForce GTX 850M - MODDED,1092
+Radeon Vega 3 Athlon PRO 300GE w/,1090
+Mobility Radeon HD 5870,1090
+RadeonT 610M,1089
+Quadro K1100M,1089
+Radeon Vega 3 Athlon Gold 3150G,1089
+MIRRORV3,1081
+Barco MXRT 5450,1079
+Radeon R7 + R7 200 Dual,1077
+Radeon R7 A10-7870K,1077
+Radeon 625,1075
+GeForce 920MX,1070
+Radeon HD 8450G + 8600/8700M Dual,1070
+A16-16A,1069
+Radeon HD 7660D + 7670 Dual,1062
+Radeon HD 7520G + 7700M Dual,1061
+Radeon R7 250,1059
+Firepro M4100,1059
+FirePro W4170M,1057
+Radeon R7 M460,1056
+Qualcomm Adreno 690 GPU,1055
+GRID RTX8000P-1B,1054
+OPAL XT/GL,1053
+Intel UHD Graphics 710,1053
+Radeon HD 6750,1052
+Radeon HD 7670A,1050
+Radeon R7 A12-9800 RADEON,1050
+Radeon Vega 3 Mobile,1047
+Radeon R7 + R7 240 Dual,1045
+Radeon Vega 3 Athlon 300GE,1044
+Intel UHD Graphics 620,1042
+Radeon 535,1042
+Radeon HD 8750M,1040
+Radeon HD 8570D + 6670 Dual,1040
+Radeon HD 8570D + HD 8570 Dual,1033
+Radeon HD 8600/8700M,1030
+Radeon 530,1029
+Radeon R7 + R5 330 Dual,1028
+Radeon R9 A375,1024
+FirePro M4150,1020
+Radeon HD 8670D + R7 240 Dual,1020
+GeForce 830M,1018
+Intel UHD 770,1017
+Radeon HD 6700M,1017
+Radeon R7 A12-9730P RADEON,1015
+Radeon R5 A6-9500E 2C+4G,1015
+Radeon RX Vega 6,1015
+FirePro V4900,1015
+Radeon HD 7690M XT,1009
+Meta Virtual Monitor Ryzen 5 5625U,1009
+GeForce 930M,1008
+Glenfly Arise-GT-10C0,1007
+Radeon EPYC 4364P 8-Core,1003
+Radeon R7 M260X,1002
+Radeon HD 7660G + HD 7500/7600 7500/7600 Dual,1002
+Radeon R7 A10-7890K,1001
+Quadro K2000M,1001
+Quadro FX 4800,1000
+Quadro 3000M,1000
+Radeon HD 8570D + R7 200 Dual,999
+Radeon HD 7660G + HD 7500M/7600M Dual,999
+Radeon Ryzen Embedded R2314,998
+Radeon HD 7640G + HD 8750M Dual,997
+Radeon R7 A265,994
+Intel HD 530,992
+Radeon R9 M375,992
+Radeon HD 7560D + 7570 Dual,985
+Radeon HD 8690M,984
+Radeon HD 7560D + 7560D Dual,983
+"Radeon R5 PRO A6-8570 R5, 8 COMPUTE CORES 2C+6G",979
+Radeon R5 A10-9630P 4C+6G,977
+Quadro 2000D,977
+Qualcomm Adreno 685 GPU,976
+Radeon HD 8670D + 8570 Dual,974
+Radeon HD 8850M,973
+Radeon R7 PRO A12-9800E,972
+Radeon R6 A10-9600P 4C+6G,970
+Radeon HD 7660G N HD 7660G + HD 7700M N HD 7700M D,967
+Radeon R7 340,966
+Radeon HD 6770M,964
+Radeon HD 8570D + R7 240 Dual,964
+Radeon R7 M270DX,962
+Radeon Ryzen 3 3200U,961
+TENSOR 1.0 Driver Intel HD 530,958
+Radeon R6 Opteron X3418,955
+Radeon Vega 3 Athlon 3000G,951
+Radeon 620,950
+Radeon HD 8670D + R7 200 Dual,950
+Radeon HD 8570 + HD 7660D Dual,949
+Quadro 2000,948
+Quadro CX,947
+Radeon HD 4850,946
+Radeon HD 6670/7670,946
+Radeon HD 7640G + 7690M Dual,946
+Radeon R7 PRO A10-8850B,945
+Radeon HD 8570,945
+zxcvIntel HD 620,944
+Radeon HD 7660D + R7 240 Dual,942
+GeForce GT 645M,941
+Radeon R7 A10-7850K,941

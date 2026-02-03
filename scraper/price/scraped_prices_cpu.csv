@@ -1,0 +1,304 @@
+name,price
+AMD Ryzen 5 5600X,167.98
+AMD Ryzen 5 5500,83.49
+AMD Ryzen 5 5600,149.99
+AMD Ryzen 5 5600G,128.0
+AMD Ryzen 5 7600,199.99
+AMD Ryzen 5 7600X,230.0
+AMD Ryzen 5 8400F,135.0
+AMD Ryzen 5 8500G,134.99
+AMD Ryzen 5 8600G,160.0
+AMD Ryzen 5 9600X,229.99
+AMD Ryzen 7 5700G,198.99
+AMD Ryzen 7 5700X,175.0
+AMD Ryzen 7 5700X3D,196.89
+AMD Ryzen 7 5800X,223.0
+AMD Ryzen 7 5800X3D,324.99
+AMD Ryzen 7 7700,328.98
+AMD Ryzen 7 7700X,348.99
+AMD Ryzen 7 7800X3D,449.0
+AMD Ryzen 7 8700F,215.0
+AMD Ryzen 7 8700G,254.99
+AMD Ryzen 7 9700X,326.75
+AMD Ryzen 9 5900X,346.99
+AMD Ryzen 9 5950X,498.0
+AMD Ryzen 9 7900,408.0
+AMD Ryzen 9 7900X,438.99
+AMD Ryzen 9 7900X3D,599.0
+AMD Ryzen 9 7950X,583.99
+AMD Ryzen 9 7950X3D,597.0
+AMD Ryzen 9 9900X,382.55
+Intel Core Ultra 5 245K,318.99
+Intel Core Ultra 5 245KF,299.0
+Intel Core Ultra 7 265K,379.13
+Intel Core Ultra 7 265KF,379.0
+Intel Core Ultra 9 285K,599.99
+AMD A10-9700,68.94
+AMD A10-9700E,130.0
+AMD A6-7400K,51.9
+AMD A6-7470K,5.6
+AMD A6-9500,60.81
+AMD A8-7600,73.32
+AMD A8-7650K,76.0
+AMD A8-9600,72.65
+AMD Athlon 200GE,55.0
+AMD Athlon 220GE,63.0
+AMD Athlon 240GE,63.0
+AMD Athlon 3000G,49.0
+AMD FX-4300,90.05
+AMD FX-6300,88.71
+AMD FX-8300,143.61
+AMD FX-8320E,132.61
+AMD FX-8350,84.95
+AMD FX-8370,140.86
+AMD FX-9370,209.95
+AMD FX-9590,231.22
+AMD Ryzen 3 1200,80.99
+AMD Ryzen 3 1300X,65.99
+AMD Ryzen 3 2200G,79.99
+AMD Ryzen 3 3100,99.0
+AMD Ryzen 3 3200G,99.0
+AMD Ryzen 3 3300X,120.0
+AMD Ryzen 3 4100,69.0
+AMD Ryzen 5 1400,139.99
+AMD Ryzen 5 1500X,152.99
+AMD Ryzen 5 1600,104.99
+AMD Ryzen 5 1600 AF,109.99
+AMD Ryzen 5 1600X,204.99
+AMD Ryzen 5 2400G,123.89
+AMD Ryzen 5 2600,133.0
+AMD Ryzen 5 2600X,149.99
+AMD Ryzen 5 2600X,269.99
+AMD Ryzen 5 3400G,149.0
+AMD Ryzen 5 3600,199.0
+AMD Ryzen 5 3600X,239.0
+AMD Ryzen 5 3600XT,199.99
+AMD Ryzen 5 4500,76.0
+AMD Ryzen 5 5500GT,103.36
+AMD Ryzen 5 5600GT,105.99
+AMD Ryzen 7 1700,301.72
+AMD Ryzen 7 1700X,199.99
+AMD Ryzen 7 1800X,249.99
+AMD Ryzen 7 2700,149.99
+AMD Ryzen 7 2700,169.99
+AMD Ryzen 7 2700X,249.99
+AMD Ryzen 7 3700X,329.0
+AMD Ryzen 7 3800X,399.0
+AMD Ryzen 7 3800XT,399.0
+AMD Ryzen 7 5700,129.96
+AMD Ryzen 9 3900X,499.0
+AMD Ryzen 9 3900XT,469.99
+AMD Ryzen 9 3950X,524.99
+AMD Ryzen Threadripper 1900X,180.09
+AMD Ryzen Threadripper 1920X,249.9
+AMD Ryzen Threadripper 1950X,417.13
+AMD Ryzen Threadripper 2920X,386.53
+AMD Ryzen Threadripper 2950X,714.99
+AMD Ryzen Threadripper 2970WX,999.99
+AMD Ryzen Threadripper 2990WX,1699.99
+AMD Ryzen Threadripper 3960X,1399.0
+AMD Ryzen Threadripper 3970X,1993.99
+AMD Ryzen Threadripper 3990X,3968.99
+AMD Ryzen Threadripper 7960X,1398.0
+AMD Ryzen Threadripper 7970X,2302.29
+AMD Ryzen Threadripper 7980X,4182.52
+AMD Ryzen Threadripper Pro 3955WX,1148.99
+AMD Ryzen Threadripper Pro 3975WX,2499.99
+AMD Ryzen Threadripper Pro 3995WX,5484.99
+AMD Ryzen Threadripper Pro 5955WX,1073.12
+AMD Ryzen Threadripper Pro 5965WX,2238.99
+AMD Ryzen Threadripper Pro 5975WX,2599.99
+AMD Ryzen Threadripper Pro 5995WX,5499.99
+AMD Ryzen Threadripper Pro 7965WX,2549.0
+AMD Ryzen Threadripper Pro 7975WX,3899.0
+AMD Ryzen Threadripper Pro 7985WX,7349.0
+AMD Ryzen Threadripper Pro 7995WX,9999.0
+Intel Celeron G1840,49.99
+Intel Celeron G6900,59.99
+Intel Core i3-10100,111.7
+Intel Core i3-10100F,77.99
+Intel Core i3-10105,112.98
+Intel Core i3-10300,171.99
+Intel Core i3-10320,172.99
+Intel Core i3-12100,138.87
+Intel Core i3-12100F,106.92
+Intel Core i3-13100,149.9
+Intel Core i3-13100F,123.98
+Intel Core i3-14100,119.97
+Intel Core i3-14100F,90.48
+Intel Core i3-4160,157.73
+Intel Core i3-4330,121.88
+Intel Core i3-6100,114.99
+Intel Core i3-6100T,126.34
+Intel Core i3-6300,137.57
+Intel Core i3-6320,178.7
+Intel Core i3-7100,129.99
+Intel Core i3-7100T,135.99
+Intel Core i3-7300,157.29
+Intel Core i3-7300T,164.33
+Intel Core i3-7320,154.66
+Intel Core i3-7350K,174.99
+Intel Core i3-8100,119.99
+Intel Core i3-8300,147.0
+Intel Core i3-8350K,179.99
+Intel Core i3-9100,90.33
+Intel Core i3-9100F,35.37
+Intel Core i3-9300,168.99
+Intel Core i3-9350KF,219.99
+Intel Core i5-10400,141.73
+Intel Core i5-10400F,116.49
+Intel Core i5-10500,218.99
+Intel Core i5-10600,219.98
+Intel Core i5-10600K,203.97
+Intel Core i5-10600KF,179.99
+Intel Core i5-11400,147.95
+Intel Core i5-11400F,134.99
+Intel Core i5-11500,213.99
+Intel Core i5-11600,245.98
+Intel Core i5-11600K,208.99
+Intel Core i5-11600KF,208.99
+Intel Core i5-12400,189.99
+Intel Core i5-12400F,165.98
+Intel Core i5-12500,235.48
+Intel Core i5-12600,258.2
+Intel Core i5-12600K,250.49
+Intel Core i5-12600KF,224.99
+Intel Core i5-13400,239.99
+Intel Core i5-13400F,209.93
+Intel Core i5-13500,249.98
+Intel Core i5-13600K,319.99
+Intel Core i5-13600KF,296.94
+Intel Core i5-14400,199.99
+Intel Core i5-14400F,175.81
+Intel Core i5-14500,239.99
+Intel Core i5-14600K,229.99
+Intel Core i5-14600KF,225.0
+Intel Core i5-4460,193.78
+Intel Core i5-4590,179.99
+Intel Core i5-4690,219.29
+Intel Core i5-6400,179.99
+Intel Core i5-6500,189.44
+Intel Core i5-6600,246.32
+Intel Core i5-6600K,219.99
+Intel Core i5-7400,182.0
+Intel Core i5-7500,202.0
+Intel Core i5-7600,229.99
+Intel Core i5-7600K,242.99
+Intel Core i5-7640X,199.99
+Intel Core i5-8400,189.99
+Intel Core i5-8500,209.95
+Intel Core i5-8600,224.0
+Intel Core i5-8600K,259.99
+Intel Core i5-9400,167.65
+Intel Core i5-9400F,142.99
+Intel Core i5-9500,209.99
+Intel Core i5-9600,249.99
+Intel Core i5-9600K,247.0
+Intel Core i5-9600KF,189.99
+Intel Core i7-10700,256.99
+Intel Core i7-10700F,271.99
+Intel Core i7-10700K,269.99
+Intel Core i7-10700KF,289.96
+Intel Core i7-11700,272.49
+Intel Core i7-11700K,269.0
+Intel Core i7-11700KF,278.69
+Intel Core i7-12700,325.8
+Intel Core i7-12700F,299.99
+Intel Core i7-12700K,294.99
+Intel Core i7-12700KF,294.99
+Intel Core i7-13700,397.98
+Intel Core i7-13700F,369.97
+Intel Core i7-13700K,417.94
+Intel Core i7-13700KF,396.98
+Intel Core i7-14700,309.0
+Intel Core i7-14700K,349.72
+Intel Core i7-14700KF,329.99
+Intel Core i7-4790K,324.77
+Intel Core i7-5820K,407.09
+Intel Core i7-5930K,250.99
+Intel Core i7-5960X,399.99
+Intel Core i7-6700,314.99
+Intel Core i7-6700K,329.99
+Intel Core i7-6800K,416.3
+Intel Core i7-6850K,649.99
+Intel Core i7-6900K,1002.99
+Intel Core i7-6950X,1102.76
+Intel Core i7-7700,326.82
+Intel Core i7-7700K,329.99
+Intel Core i7-7740X,349.18
+Intel Core i7-7800X,361.97
+Intel Core i7-7820X,510.63
+Intel Core i7-8086K,425.0
+Intel Core i7-8700,216.99
+Intel Core i7-8700K,289.99
+Intel Core i7-9700K,364.99
+Intel Core i7-9700KF,315.99
+Intel Core i9-10850K,299.99
+Intel Core i9-10900,379.99
+Intel Core i9-10900F,414.99
+Intel Core i9-10900K,343.99
+Intel Core i9-10900KF,359.99
+Intel Core i9-10900X,589.99
+Intel Core i9-10920X,699.99
+Intel Core i9-10940X,799.99
+Intel Core i9-10980XE,999.99
+Intel Core i9-11900,455.99
+Intel Core i9-11900F,429.98
+Intel Core i9-11900K,347.39
+Intel Core i9-11900KF,328.88
+Intel Core i9-12900,537.99
+Intel Core i9-12900F,463.0
+Intel Core i9-12900K,432.38
+Intel Core i9-12900KF,413.99
+Intel Core i9-12900KS,519.99
+Intel Core i9-13900,585.98
+Intel Core i9-13900F,559.98
+Intel Core i9-13900K,579.99
+Intel Core i9-13900KF,568.74
+Intel Core i9-13900KS,729.99
+Intel Core i9-14900,578.99
+Intel Core i9-14900K,437.86
+Intel Core i9-14900KF,436.0
+Intel Core i9-7900X,774.99
+Intel Core i9-7920X,794.6
+Intel Core i9-7940X,1349.0
+Intel Core i9-7960X,1399.99
+Intel Core i9-7980XE,1799.98
+Intel Core i9-9900K,484.99
+Intel Core i9-9900KF,379.99
+Intel Core i9-9900KS,449.99
+Intel Pentium G3250,66.66
+Intel Pentium G4400,55.89
+Intel Pentium G4500,83.18
+Intel Pentium G4520,115.36
+Intel Pentium G4560,59.99
+Intel Pentium G4600,96.25
+Intel Pentium G4620,104.99
+Intel Pentium G7400,79.99
+Intel Pentium Gold G5400,56.99
+Intel Pentium Gold G5500,91.6
+Intel Pentium Gold G5600,92.99
+Intel Xeon E3-1231 V3,147.18
+Intel Xeon E5-1620 V3,356.21
+Intel Xeon E5-1650 V4,299.99
+Intel Xeon E5-2603 V3,182.99
+Intel Xeon E5-2603 V4,218.13
+Intel Xeon E5-2609 V4,319.99
+Intel Xeon E5-2620 V3,55.24
+Intel Xeon E5-2620 V4,409.99
+Intel Xeon E5-2630 V4,683.99
+Intel Xeon E5-2640 V3,137.52
+Intel Xeon E5-2640 V4,971.62
+Intel Xeon E5-2650 V4,184.99
+Intel Xeon E5-2660 V3,1524.63
+Intel Xeon E5-2660 V4,559.99
+Intel Xeon E5-2680 V3,526.5
+Intel Xeon E5-2680 V4,1791.99
+Intel Xeon E5-2683 V4,1889.99
+Intel Xeon E5-2687W V3,2499.99
+Intel Xeon E5-2687W V4,2174.99
+Intel Xeon E5-2690 V4,2168.0
+Intel Xeon E5-2695 V3,2451.42
+Intel Xeon E5-2695 V4,2449.99
+Intel Xeon E5-2697 V3,2732.93
+Intel Xeon E5-2697 V4,1167.21

@@ -1,0 +1,539 @@
+[
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What is the main software that manages computer hardware and applications?",
+    "choices": [
+      "Format",
+      "Partition",
+      "Operating System",
+      "Bootloader"
+    ],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What software allows the operating system to communicate with hardware?",
+    "choices": [
+      "Driver",
+      "Firmware",
+      "Compiler",
+      "Debugger"
+    ],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which Windows utility displays installed hardware and drivers? ______",
+    "choices": [],
+    "answer": "device manager"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "A clean installation removes all existing files and settings.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is commonly used for USB drives?",
+    "choices": [
+      "NTFS",
+      "FAT32",
+      "exFAT",
+      "RAW"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A bootable USB is an example of ______.",
+    "choices": [
+      "SSD",
+      "HDD",
+      "RAM",
+      "Installation media"
+    ],
+    "answer": "d"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "The process of preparing a storage device for OS installation is called ______.",
+    "choices": [],
+    "answer": "formatting"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Drivers are optional and not required for hardware to work.",
+    "choices": [],
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which system is used to set the boot order before installation?",
+    "choices": [
+      "BIOS",
+      "Task Manager",
+      "Registry Editor",
+      "Control Panel"
+    ],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Windows setup uses what tool to guide users during installation?",
+    "choices": [
+      "SSD",
+      "HDD",
+      "Installation Wizard",
+      "USB Hub"
+    ],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Windows activation requires a valid ______.",
+    "choices": [],
+    "answer": "product key"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A 64-bit OS can support more memory than a 32-bit OS.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which is the modern replacement for BIOS?",
+    "choices": [
+      "LAN",
+      "POST",
+      "BIOS clock",
+      "UEFI"
+    ],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which startup mode loads the OS with minimal drivers?",
+    "choices": [
+      "Recovery mode",
+      "Safe mode",
+      "Boot menu",
+      "Admin panel"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "A section of a storage drive created for installation is called a ______.",
+    "choices": [],
+    "answer": "partition"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A corrupted driver can cause hardware malfunction.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Which service can automatically install missing drivers?",
+    "choices": [
+      "Windows Update",
+      "Registry Editor",
+      "Disk Cleanup",
+      "CMD"
+    ],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is recommended for Windows installation?",
+    "choices": [
+      "MBR",
+      "FAT",
+      "NTFS",
+      "EXT4"
+    ],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Changing the ______ in BIOS lets the system boot from USB or DVD.",
+    "choices": [],
+    "answer": "boot order"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Which tools can help repair startup issues?",
+    "choices": [
+      "CMD",
+      "Recovery drive",
+      "UEFI settings",
+      "All of the above"
+    ],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "An OS can be installed without storage devices.",
+    "choices": [],
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Which process divides a hard drive into logical sections?",
+    "choices": [
+      "Disk Cleanup",
+      "Defragmentation",
+      "Disk Partitioning",
+      "Firewall"
+    ],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Windows installation begins by running ______.",
+    "choices": [],
+    "answer": "setup.exe"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which drive format uses the traditional boot record system?",
+    "choices": [
+      "FAT",
+      "MBR",
+      "NTFS",
+      "RAW"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "A driver update can improve hardware performance.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Where is the safest source for downloading drivers?",
+    "choices": [
+      "Manufacturer's website",
+      "Task Manager",
+      "File Explorer",
+      "Notepad"
+    ],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "A USB configured for OS installation is called a ______.",
+    "choices": [],
+    "answer": "bootable usb"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Which feature helps restore the OS during failures?",
+    "choices": [
+      "Windows Explorer",
+      "Memory Diagnostics Tool",
+      "Disk Manager",
+      "Recovery Mode"
+    ],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "Installing the wrong driver can cause system instability.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Ubuntu is an example of what operating system?",
+    "choices": [
+      "Android",
+      "iOS",
+      "Linux",
+      "MS-DOS"
+    ],
+    "answer": "c"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Most driver settings in Windows can be viewed from ______.",
+    "choices": [],
+    "answer": "control panel"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Where can the system time and date be adjusted before boot?",
+    "choices": [
+      "UEFI",
+      "POST",
+      "CMOS",
+      "BIOS setup"
+    ],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Drivers never need updates after installation.",
+    "choices": [],
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "What file format is commonly used for OS installation images?",
+    "choices": [
+      "SSD",
+      "Installer ISO",
+      "PSU",
+      "GPU"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Installing software often requires ______ privileges.",
+    "choices": [],
+    "answer": "administrator"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Application",
+    "question": "What tool assists in repairing boot issues?",
+    "choices": [
+      "Windows Recovery Environment",
+      "Disk Analyzer",
+      "Firewall",
+      "Screensaver"
+    ],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter2",
+    "bloom": "Comprehension",
+    "question": "Linux distributions can be installed using a bootable USB.",
+    "choices": [],
+    "answer": "TRUE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "During installation, users must accept a ______ to proceed.",
+    "choices": [],
+    "answer": "license agreement"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter2",
+    "bloom": "Knowledge",
+    "question": "Which file system is commonly used in Linux installations?",
+    "choices": [
+      "FAT32",
+      "SWAP",
+      "EXT2",
+      "EXT4"
+    ],
+    "answer": "d"
+  },
+   {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "An application fails to install and shows an error related to missing .NET Framework. What is the MOST likely cause?",
+    "choices": ["Insufficient RAM","Missing dependency","Corrupted OS","Invalid license"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "A user installs software but it does not open after installation. Which should be checked FIRST?",
+    "choices": ["Internet connection","System registry entries","Monitor resolution","BIOS settings"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "A mismatched software version can cause compatibility issues with the operating system.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "Which factor MOST likely causes an installer to stop midway through installation?",
+    "choices": ["Low disk space","Outdated wallpaper","Mouse driver","Screen brightness"],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "When software fails due to missing required components, these components are called ______.",
+    "answer": "dependencies"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "Running multiple installers simultaneously can increase the chance of installation errors.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "An installer works on Windows 10 but fails on Windows 11. What is the MOST probable reason?",
+    "choices": ["Hardware damage","OS compatibility issue","Virus infection","Wrong file name"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter3",
+    "bloom": "Analysis",
+    "question": "Installation errors related to permissions can often be solved by running the installer as ______.",
+    "answer": "administrator"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Synthesis",
+    "question": "Which sequence is BEST when installing a critical application on a new system?",
+    "choices": [
+      "Install application → Check requirements → Activate",
+      "Check requirements → Backup system → Install application",
+      "Install antivirus → Install application → Format disk",
+      "Activate OS → Ignore updates → Install application"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter3",
+    "bloom": "Synthesis",
+    "question": "Creating a system restore point before installing software allows recovery if problems occur.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter3",
+    "bloom": "Synthesis",
+    "question": "Combining an installer, required dependencies, and patches into one package creates a ______ installer.",
+    "answer": "software bundle"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Synthesis",
+    "question": "Which setup BEST supports installing the same application on multiple computers efficiently?",
+    "choices": ["Manual installation","Portable apps only","Silent installation","Trial version"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Evaluation",
+    "question": "Which source is the SAFEST for downloading application installers?",
+    "choices": ["Third-party download sites","File-sharing forums","Official developer website","Email attachments"],
+    "answer": "c"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter3",
+    "bloom": "Evaluation",
+    "question": "Using cracked software is acceptable if it functions correctly.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter3",
+    "bloom": "Evaluation",
+    "question": "Verifying a software installer’s ______ helps ensure it has not been altered or tampered with.",
+    "answer": "digital signature"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter3",
+    "bloom": "Evaluation",
+    "question": "Which practice BEST ensures long-term stability after application installation?",
+    "choices": ["Skipping updates","Ignoring errors","Applying updates and patches","Disabling security software"],
+    "answer": "c"
+  }
+]

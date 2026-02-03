@@ -10,15 +10,15 @@ export async function getRecords() {
     return User; // Return the fetched records
 }
 
-export async function addRecords(username, password, userType, emailAddress) {
-    if (!["participant", "facilitator"].includes(userType)) {
-        throw new Error("Invalid user type. Must be 'participant' or 'facilitator'.");
+export async function addRecords(username, userType, emailAddress) {
+    if (!["participant", "tutor"].includes(userType)) {
+        throw new Error("Invalid user type. Must be 'participant' or 'tutor'.");
     }
 
     const { error } = await supabase
         .from('User')
         .insert([
-            { username, password, userType, emailAddress }, // Save emailAddress along with other fields
+            { username, userType, emailAddress }, // Save emailAddress along with other fields
         ]);
     if (error) {
         console.error("Error adding record:", error); // Log the error for debugging
@@ -109,51 +109,72 @@ export async function uploadProfileImage(localFileOrUri, filename) {
     return publicUrlData.publicUrl;
 }
 
+export async function getUserByIdFromAuth(userId) {
+    const { data, error } = await supabase
+        .from('User')
+        .select('*')
+        .eq('id', userId)
+        .single();
+    
+    if (error) {
+        throw new Error("Failed to fetch user");
+    }
+    return data;
+}
+
 const PART_CONFIG = {
   MOTHERBOARD: {
     table: 'PARTS_MOTHERBOARD',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['socket', 'form_factor', 'ram_slots'],
   },
   GPU: {
     table: 'PARTS_GPU',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
-    extraCols: ['chipset', 'vram', 'tdp'],
+    extraCols: ['chipset', 'vram', 'tdp', 'benchmark'],
   },
   CPU: {
     table: 'PARTS_CPU',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['cores', 'microarchitecture', 'core_clock', 'boost_clock'],
   },
   FAN: {
     table: 'PARTS_FAN',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['supported_socket', 'type'],
   },
   RAM: {
     table: 'PARTS_RAM',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['speed', 'size', 'stick'],
   },
   PSU: {
     table: 'PARTS_PSU',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['type', 'wattage'],
   },
   STORAGE: {
     table: 'PARTS_STORAGE',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['capacity', 'type', 'unit', 'form_factor',],
   },
   CASE: {
     table: 'PARTS_CASE',
+    id: 'id',
     nameCol: 'name',
     priceCol: 'price',
     extraCols: ['type', 'dimensions', 'psu_type', 'bays',],
@@ -164,8 +185,8 @@ export async function getAllParts() {
   const allParts = {};
 
   for (const [type, config] of Object.entries(PART_CONFIG)) {
-    const { table, nameCol, priceCol, extraCols = [] } = config;
-    const columns = [nameCol, priceCol, ...extraCols].join(', ');
+    const { table, id, nameCol, priceCol, extraCols = [] } = config;
+    const columns = [id, nameCol, priceCol, ...extraCols].join(', ');
 
     // First, get total count
     const { count, error: countError } = await supabase
@@ -197,6 +218,7 @@ export async function getAllParts() {
     }
 
     allParts[type] = items.map(item => ({
+      id: item[id],
       value: item[nameCol],
       price: item[priceCol],
       ...extraCols.reduce((acc, col) => {
@@ -207,4 +229,24 @@ export async function getAllParts() {
   }
 
   return allParts;
+}
+
+export async function getCurrentUser() {
+    const { data: { user: authUser }, error: authError } = await supabase.auth.getUser();
+    
+    if (authError || !authUser) {
+        throw new Error("Failed to get authenticated user");
+    }
+
+    const { data: userData, error: userError } = await supabase
+        .from('User')
+        .select('*')
+        .eq('emailAddress', authUser.email)
+        .single();
+
+    if (userError) {
+        throw new Error("Failed to fetch user data");
+    }
+
+    return userData;
 }

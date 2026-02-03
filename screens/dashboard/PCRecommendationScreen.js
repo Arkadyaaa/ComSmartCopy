@@ -1,51 +1,40 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Modal, FlatList, TextInput, Picker, Switch } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Modal, Button, FlatList, TextInput, Picker, Switch } from 'react-native';
 import { useState, useEffect } from 'react';
 import SidebarLayout from './SidebarLayout';
 import { useRoute, useNavigation } from '@react-navigation/native';
-import Gauge from '../components/Gauge';
+import Gauge from '../components/CircularGauge';
 import PartPickerModal from '../components/PartPickerModal';
 import HoverableOpacity from '../components/HoverableOpacity';
+import CustomDivider from '../components/CustomDivider';
 import { getAllParts } from '../../services/apiRecords';
+import { Sparkles, Trash2, Download, Save, Settings2, Target, Cpu, Gamepad2, Briefcase, Monitor, } from 'lucide-react';
+import { LinearGradient } from 'expo-linear-gradient';
+import GradientText from '../components/GradientText';
+import { recommendBuild } from '../../services/pcRecommendationAlgorithm';
+import { partImages } from '../components/PartImages.js';
 
 export default function PCRecommendationScreen() {
   const route = useRoute();
   const navigation = useNavigation();
   const user = route.params?.user;
 
-  const partImages = {
-    MOTHERBOARD: {
-      selected: require('../../assets/part_icons/MOBO.png'),
-      empty: require('../../assets/part_icons_empty/MOBO.png'),
-    },
-    GPU: {
-      selected: require('../../assets/part_icons/GPU.png'),
-      empty: require('../../assets/part_icons_empty/GPU.png'),
-    },
-    CPU: {
-      selected: require('../../assets/part_icons/CPU.png'),
-      empty: require('../../assets/part_icons_empty/CPU.png'),
-    },
-    FAN: {
-      selected: require('../../assets/part_icons/FAN.png'),
-      empty: require('../../assets/part_icons_empty/FAN.png'),
-    },
-    RAM: {
-      selected: require('../../assets/part_icons/RAM.png'),
-      empty: require('../../assets/part_icons_empty/RAM.png'),
-    },
-    PSU: {
-      selected: require('../../assets/part_icons/PSU.png'),
-      empty: require('../../assets/part_icons_empty/PSU.png'),
-    },
-    STORAGE: {
-      selected: require('../../assets/part_icons/STORAGE.png'),
-      empty: require('../../assets/part_icons_empty/STORAGE.png'),
-    },
-    CASE: {
-      selected: require('../../assets/part_icons/CASE.png'),
-      empty: require('../../assets/part_icons_empty/CASE.png'),
-    },
-  };
+  // Font
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link); // clean up
+    };
+  }, []);
+
+  const useCaseOptions = [
+    { label: 'Gaming', value: 'gaming', icon: Gamepad2 },
+    { label: 'Productivity', value: 'productivity', icon: Briefcase },
+    { label: 'General Use', value: 'general_use', icon: Monitor },
+  ];
 
   const getEmptyComponents = (groupedOptions) =>
     Object.keys(partImages).map((label) => ({
@@ -66,12 +55,20 @@ export default function PCRecommendationScreen() {
         const grouped = await getAllParts();
         setPartOptions(grouped);
 
-        const recommended = Object.entries(grouped).map(([label, options]) => ({
-          label,
-          value: options[0]?.value || '',
-          price: options[0]?.price || 0,
-          image: partImages[label],
-        }));
+        const recommended = Object.entries(grouped).map(([label, options]) => {
+          const first = options[0];
+          return {
+            label,
+            value: first?.value || '',
+            price: first?.price || 0,
+            image: partImages[label],
+            socket: first?.socket,
+            microarchitecture: first?.microarchitecture,
+            wattage: first?.wattage,
+            benchmark: first?.benchmark,
+            supported_socket: first?.supported_socket,
+          };
+        });
 
         setRecommendedComponents(recommended);
         setComponents(getEmptyComponents(grouped));
@@ -86,53 +83,42 @@ export default function PCRecommendationScreen() {
   
   const formatPrice = (num) => {
     const rounded = Math.round(num);
-    const formattedNumber = rounded.toLocaleString(); // Adds commas
-    return num <= 0 ? '' : `₱${formattedNumber}`;
+    const formattedNumber = rounded.toLocaleString();
+    return `₱${formattedNumber}`;
   };
   
   const totalPrice = components.reduce((sum, comp) => sum + (comp.price || 0), 0);
 
-  const benchmarkScores = {
-    'NVIDIA RTX 3060': 12000,
-    'NVIDIA RTX 4070': 19000,
-    'RADEON RX 6800': 16000,
-    'RYZEN 5 5600': 4000,
-    'RYZEN 7 5800X': 5000,
-    'Intel i5 12400F': 4500,
-  };
-
-  const powerUsages = {
-    'NVIDIA RTX 3060': 170,
-    'NVIDIA RTX 4070': 200,
-    'RADEON RX 6800': 230,
-    'RYZEN 5 5600': 65,
-    'RYZEN 7 5800X': 105,
-    'Intel i5 12400F': 65,
-  };
-
-  const psuOutput = {
-    'CORSAIR CX650M': 650,
-    'MSI MAG A750GL PCIE5': 750,
-    'Thermaltake Smart': 600,
-  }
-
   const psuComponent = components.find((comp) => comp.label === 'PSU');
-  const psuWatts = psuOutput[psuComponent?.value] || 0;
+  const psuWatts = psuComponent?.wattage || 0;
 
-  const benchmarkScore = components.reduce((sum, comp) => {
-    return sum + (benchmarkScores[comp.value] || 0);
+  const gpuComponent = components.find((comp) => comp.label === 'GPU');
+  const benchmarkScore = gpuComponent?.benchmark || 0;
+
+  const [userBudget, setUserBudget] = useState('');
+  const [tempBudget, setTempBudget] = useState(userBudget);
+  const budget = userBudget ? parseInt(userBudget) : 0;
+  
+  const [userBenchmark, setUserBenchmark] = useState('');
+  const [tempBenchmark, setTempBenchmark] = useState(userBenchmark);
+  const benchmarkMax = userBenchmark ? parseInt(userBenchmark) || 0 : 10000;
+  
+  const [powerUsage, setPowerUsage] = useState(0);
+  useEffect(() => {
+  const totalPower = components.reduce((sum, comp) => {
+    if (comp.label === 'GPU' && comp.tdp) return sum + parseInt(comp.tdp);
+    //if (comp.label === 'CPU' && comp.wattage) return sum + parseInt(comp.wattage);
+    //if (comp.label === 'FAN' && comp.wattage) return sum + parseInt(comp.wattage);
+    //if (comp.label === 'STORAGE' && comp.wattage) return sum + parseInt(comp.wattage);
+    return sum;
   }, 0);
 
-  const powerUsage = components.reduce((sum, comp) => {
-    return sum + (powerUsages[comp.value] || 0);
-  }, 0);
-
-  const budget = 70000;
+  setPowerUsage(totalPower);
+}, [components]);
 
   const gauges = [
     {
       label: 'Budget',
-      size: 200,
       value: totalPrice,
       limit: budget,
       max: Math.round(budget + (budget * 0.25)),
@@ -140,27 +126,18 @@ export default function PCRecommendationScreen() {
     },
     {
       label: 'Benchmark Score',
-      size: 200,
       value: benchmarkScore,
-      limit: 15000,
-      max: 25000,
+      limit: benchmarkMax,
+      max: Math.round(benchmarkMax * 2),
       invertColor: true,
+      isBenchmark: true,
     },
     {
       label: 'Power Usage',
-      size: 200,
       value: powerUsage,
       limit: Math.round(psuWatts * 0.8),
       max: psuWatts,
-    },
-  ];
-
-  const buttons = [
-    { label: 'RECOMMEND',
-      color: '#FFD305',
-    },
-    { label: 'SAVE BUILD',
-      color: '#81CE65',
+      displayMax: true,
     },
   ];
 
@@ -174,6 +151,7 @@ export default function PCRecommendationScreen() {
 
   const handleClearButton = () => {
     setComponents(getEmptyComponents(partOptions));
+    setIncompatibleParts([]);
   };
 
   const handleSaveButton = () => {
@@ -187,102 +165,174 @@ export default function PCRecommendationScreen() {
   };
 
   const handleLoadButton = () => {
-    alert("Build Loaded");
+    alert("No Builds Saved");
   };
 
   const [confirmModalVisible, setConfirmModalVisible] = useState(false);
   const [warningModalVisible, setWarningModalVisible] = useState(false);
+  const [useCaseWarningVisible, setUseCaseWarningVisible] = useState(false);
+  const [budgetWarningVisible, setBudgetWarningVisible] = useState(false);
 
   const handlePartSelect = (selectedPartLabel, selectedOption) => {
     const updatedComponents = components.map(comp => {
       if (comp.label === selectedPartLabel) {
-        return {
+        const updated = {
           ...comp,
           value: selectedOption.value,
           price: selectedOption.price,
         };
+      
+        if (selectedPartLabel === "PSU") {
+          updated.wattage = selectedOption.wattage;
+        }
+
+        if (selectedPartLabel === "GPU"){
+          updated.benchmark = selectedOption.benchmark;
+          updated.tdp = selectedOption.tdp;
+        }
+
+      if (selectedPartLabel === "CPU") {
+        updated.microarchitecture = selectedOption.microarchitecture;
+      }
+
+      if (selectedPartLabel === "MOTHERBOARD") {
+        updated.socket = selectedOption.socket;
+      }
+      
+      if (selectedPartLabel === "FAN") {
+        updated.supported_socket = selectedOption.supported_socket;
+      }
+
+        return updated;
       }
       return comp;
     });
+
     setComponents(updatedComponents);
+    setIncompatibleParts(checkCompatibility(updatedComponents));
+  };
+
+  const checkCompatibility = (components) => {
+    const cpu = components.find(c => c.label === 'CPU');
+    const mobo = components.find(c => c.label === 'MOTHERBOARD');
+    const psu = components.find(c => c.label === 'PSU');
+    const fan = components.find(c => c.label === 'FAN');
+
+    const incompatible = [];
+
+    if (cpu?.microarchitecture && mobo?.socket && cpu.microarchitecture !== mobo.socket) {
+      incompatible.push('CPU', 'MOTHERBOARD');
+    }
+
+    if (psu?.wattage && Math.round(psu.wattage * 0.8) < powerUsage) {
+      incompatible.push('PSU');
+    }
+
+    if (cpu?.microarchitecture && fan?.supported_socket) {
+      const supportedSockets = fan.supported_socket
+        .split(',')
+        .map(s => s.trim().toUpperCase());
+
+      if (!supportedSockets.includes(cpu.microarchitecture.toUpperCase())) {
+        incompatible.push('FAN');
+      }
+    }
+
+    return incompatible;
   };
   
   const [preferenceModalVisible, setPreferenceModalVisible] = useState(false);
-  const [userBudget, setUserBudget] = useState('');
+  const [budgetModalVisible, setBudgetModalVisible] = useState(false);
+  const [benchmarkModalVisible, setBenchmarkModalVisible] = useState(false);
   const [useCase, setUseCase] = useState('');
   const [advanced, setAdvanced] = useState(false);
-  const [userBenchmark, setUserBenchmark] = useState('');
   const [maxPowerPref, setMaxPowerPref] = useState('');
+  const [incompatibleParts, setIncompatibleParts] = useState([]);
+
+  useEffect(() => {
+    setIncompatibleParts(checkCompatibility(components));
+  }, [components, powerUsage]);
 
   const handleRecommendButton = () => {
     setPreferenceModalVisible(true);
+  };
+
+  const handleBudgetButton = () => {
+    setBudgetModalVisible(true);
+  };
+
+  const handleBenchmarkButton = () => {
+    setBenchmarkModalVisible(true);
+  };
+
+  const getPreferenceValues = (useCase) => {
+    switch (useCase) {
+      case 'gaming':
+        return { benchmark: 15000 };
+      case 'productivity':
+        return { benchmark: 15000 };
+      case 'general_use':
+        return { benchmark: 10000 };
+      default:
+        return { benchmark: 10000 };
+    }
   };
 
 
   return (
 
     <SidebarLayout activeTab="PC Recommendation" user={user}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
         
-        <Text style={styles.header}>Recommendations</Text>
-        <View style={styles.divider} />
-
-        <View style={styles.grid}>
-          {components.map((item, index) => (
-            <HoverableOpacity
-              outerStyle={styles.partsCard}
-              hoverStyle={styles.partsCardHover}
-              key={index}
-              style={styles.partsCard}
-              onPress={() => handlePartPress(item)}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.label}>{item.label}</Text>
-              <Image source={item.value ? item.image.selected : item.image.empty} style={styles.image} />
-              <Text style={styles.value}>{item.value}</Text>
-              <Text style={styles.label}>{formatPrice(item.price)}</Text>
-            </HoverableOpacity>
-          ))}
+      <View style={styles.topBar}>
+        {/* Left side */}
+        <View style={styles.topBarLeft}>
+          <View style={styles.iconWrapper}>
+            <Cpu size={24} color="#3B82F6" />
+          </View>
+          <GradientText text="PC Recommendation" style={styles.header} gradient={GRADIENTS.accent}/>
         </View>
+
+        {/* Right side */}
+        <Text style={styles.subHeader}>Build your dream machine</Text>
+      </View>
+
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
         
         <View style={styles.grid}>
           <HoverableOpacity 
             onPress={handleRecommendButton} 
-            outerStyle={[styles.buttonsCard, styles.recommendButton]}
+            outerStyle={[styles.buttonsCard]}
             hoverStyle={styles.recommendButtonHover}
+            {...GRADIENTS.accent}
           >
-            <Text style={styles.buttonText}>Recommend</Text>
-          </HoverableOpacity>
+            <LinearGradient
+              colors={GRADIENTS.accent.colors}
+              start={GRADIENTS.accent.start}
+              end={GRADIENTS.accent.end}
+              style={[StyleSheet.absoluteFill, { borderRadius: 14 }]}
+            />
+  
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+              <Sparkles style={styles.buttonIcon} />
+              <Text style={styles.buttonText}>Recommend</Text>
+            </View>
+          </HoverableOpacity  >
+
           <HoverableOpacity 
             onPress={handleClearButton} 
             outerStyle={[styles.buttonsCard, styles.clearButton]}
             hoverStyle={styles.clearButtonHover}
           >
+            <Trash2 style={styles.buttonIcon}/>
             <Text style={styles.buttonText}>Clear</Text>
           </HoverableOpacity>
-        </View>
-        
-        <View style={styles.divider} />
 
-        <View style={styles.totalPriceContainer}>
-          <Text style={styles.totalPrice}>Total Price: {formatPrice(gauges[0].value)}</Text>
-        </View>
-        
-        <View style={styles.gaugeGrid}>
-          {gauges.map((gauges, index) => (
-            <View key={index} style={styles.gaugeCard}>
-              <Text style={styles.gaugeLabel}>{gauges.label}</Text>
-              <Gauge size={gauges.size} value={gauges.value} limit={gauges.limit} max={gauges.max} isPrice={gauges.isPrice} invertColor={gauges.invertColor}/>
-            </View>
-          ))}
-        </View>
-        
-        <View style={styles.grid}>
           <HoverableOpacity 
             onPress={handleLoadButton} 
             outerStyle={[styles.buttonsCard, styles.loadButton]}
             hoverStyle={styles.loadButtonHover}
           >
+            <Download style={styles.buttonIcon}/>
             <Text style={styles.buttonText}>Load Build</Text>
           </HoverableOpacity>
 
@@ -291,10 +341,110 @@ export default function PCRecommendationScreen() {
             outerStyle={[styles.buttonsCard, styles.saveButton]}
             hoverStyle={styles.saveButtonHover}
           >
+            <Save style={styles.buttonIcon}/>
             <Text style={styles.buttonText}>Save Build</Text>
           </HoverableOpacity>
         </View>
 
+        <View style={styles.grid}>
+          {components.map((item, index) => {
+            const isFilled = !!item.value;
+            const isIncompatible = incompatibleParts.includes(item.label);
+
+            return(
+              <HoverableOpacity
+                outerStyle={[
+                  styles.partsCard,
+                  isFilled && styles.partsCardFilled,
+                  isIncompatible && styles.partsCardIncompatible,
+                ]}
+                hoverStyle={isIncompatible ? styles.partsCardHoverIncompatible : styles.partsCardHover}
+                key={index}
+                style={styles.partsCard}
+                onPress={() => handlePartPress(item)}
+                onHoverIn={() => isIncompatible && setHoveredPart(item.label)}
+                onHoverOut={() => isIncompatible && setHoveredPart(null)}
+                activeOpacity={0.8}
+              >
+                {(hover) => (
+                  <>
+                    <Text style={styles.label}>{item.label}</Text>
+                    <Image
+                      source={
+                        isIncompatible
+                          ? item.image.incompatible
+                          : item.value
+                            ? item.image.selected
+                            : item.image.empty
+                      }
+                      style={styles.image}
+                    />
+                    <Text style={styles.value}>{item.value}</Text>
+                    <Text style={[ item.value ? styles.label : styles.pricePlaceholder ]}>
+                      {item.value ? formatPrice(item.price) : 'Click to select'}
+                    </Text>
+
+                    {/* --- Tooltip --- */}
+                    {isIncompatible && hover && (
+                      <View style={styles.tooltip}>
+                        <Text style={styles.tooltipText}>
+                          {{
+                            PSU: 'PSU wattage is insufficient for selected components',
+                            MOTHERBOARD: 'Motherboard socket does not match CPU',
+                            CPU: 'CPU is not compatible with Motherboard',
+                            FAN: 'Fan does not support selected CPU socket',
+                          }[item.label] || 'Incompatible with selected components'}
+                        </Text>
+                      </View>
+                    )}
+                  </>
+                )}
+              </HoverableOpacity>
+            );
+          })}
+        </View>
+
+        <View style={styles.totalPriceContainer}>
+          <Text style={styles.totalPriceText}>Total Build Cost</Text>
+          <GradientText text={formatPrice(gauges[0].value)} style={styles.totalPrice} gradient={GRADIENTS.accent}/>
+        </View>
+        
+        <CustomDivider />
+        
+        <View style={styles.gaugeGrid}>
+          {gauges.map((gauges, index) => (
+            <View key={index} style={styles.gaugeCard}>
+              <Text style={styles.gaugeLabel}>{gauges.label}</Text>
+              <Gauge size={gauges.size} 
+                  value={gauges.value} 
+                  limit={gauges.limit} 
+                  max={gauges.max} 
+                  isPrice={gauges.isPrice} 
+                  isBenchmark={gauges.isBenchmark} 
+                  invertColor={gauges.invertColor}/>
+            </View>
+          ))}
+        </View>
+        
+        <View style={styles.grid}>
+          <HoverableOpacity 
+            onPress={handleBudgetButton} 
+            outerStyle={[styles.buttonsCard, styles.budgetButton]}
+            hoverStyle={styles.budgetButtonHover}
+          >
+            <Settings2 style={styles.buttonIcon}/>
+            <Text style={styles.buttonText}>Set Budget</Text>
+          </HoverableOpacity>
+
+          <HoverableOpacity 
+            onPress={handleBenchmarkButton} 
+            outerStyle={[styles.buttonsCard, styles.benchmarkButton]}
+            hoverStyle={styles.benchmarkButtonHover}
+          >
+            <Target style={styles.buttonIcon}/>
+            <Text style={styles.buttonText}>Set Benchmark Goal</Text>
+          </HoverableOpacity>
+        </View>
       </ScrollView>
     
       <PartPickerModal
@@ -302,10 +452,7 @@ export default function PCRecommendationScreen() {
         onClose={() => setModalVisible(false)}
         selectedPart={selectedPart}
         partOptions={partOptions}
-        onSelect={(item) => {
-          handlePartSelect(selectedPart.label, item);
-          setModalVisible(false);
-        }}
+        onSelect={handlePartSelect}
         components={components}
         setComponents={setComponents}
         formatPrice={formatPrice}
@@ -373,71 +520,50 @@ export default function PCRecommendationScreen() {
         </View>
       </Modal>
 
-      {/* USER PREFERENCE */}
+      {/* SET BUDGET */}
       <Modal
         transparent={true}
-        visible={preferenceModalVisible}
+        visible={budgetModalVisible}
         animationType="fade"
-        onRequestClose={() => setPreferenceModalVisible(false)}
+        onRequestClose={() => setBudgetModalVisible(false)}
       >
         <View style={styles.preferenceModal}>
           <View style={styles.preferenceModalContent}>
-            <Text style={styles.preferenceModalTitle}>Set Your Preferences</Text>
-
-            <Text style={styles.label}>Budget (₱)</Text>
-            <TextInput
-              style={styles.input}
-              keyboardType="numeric"
-              placeholder="Enter budget"
-              value={userBudget}
-              onChangeText={setUserBudget}
-            />
-
-            <Text style={styles.label}>Use Case</Text>
-            <Picker
-              selectedValue={useCase}
-              style={styles.input}
-              onValueChange={(itemValue) => setUseCase(itemValue)}
+            {/* Close Button */}
+            <TouchableOpacity
+              onPress={() => {
+                setTempBudget(userBudget);
+                setBudgetModalVisible(false);
+              }}
+              style={styles.modalCloseButton}
             >
-              <Picker.Item label="Select use case" value="" />
-              <Picker.Item label="Gaming" value="gaming" />
-              <Picker.Item label="Productivity" value="productivity" />
-              <Picker.Item label="Streaming" value="streaming" />
-              <Picker.Item label="General Use" value="general" />
-            </Picker>
+              <Text style={styles.modalCloseText}>✕</Text>
+            </TouchableOpacity>
 
-            <Text style={styles.label}>Advanced</Text>
-            <Switch
-              value={advanced}
-              onValueChange={setAdvanced}
-              style={styles.preferenceSwitch}
-            />
+            <View>
+              <Text style={styles.preferenceModalTitle}>Set Budget</Text>
 
-            {advanced && (
-              <>
-                <Text style={styles.label}>Benchmark Goal</Text>
-                <TextInput
-                  style={styles.input}
-                  keyboardType="numeric"
-                  placeholder="Enter target benchmark"
-                  value={userBenchmark}
-                  onChangeText={setUserBenchmark}
-                />
-
-                <Text style={styles.label}>Max Power Usage</Text>
-                <TextInput
-                  style={styles.input}
-                  keyboardType="numeric"
-                  placeholder="Enter max power usage"
-                  value={maxPowerPref}
-                  onChangeText={setMaxPowerPref}
-                />
-              </>
-            )}
+              <Text style={styles.preferenceModalLabel}>Budget (₱)</Text>
+              <TextInput
+                style={styles.input}
+                keyboardType="numeric"
+                placeholder="Enter budget"
+                placeholderTextColor="#9CA3AF"
+                value={tempBudget}
+                onChangeText={(text) => {
+                  // Remove any non-digit characters
+                  const numericText = text.replace(/[^0-9]/g, '');
+                  setTempBudget(numericText);
+                }}
+              />
+            </View>
 
             <View style={styles.confirmModalButtonContainer}>
               <HoverableOpacity
-                onPress={() => setPreferenceModalVisible(false)}
+                onPress={() => {
+                  setTempBudget(userBudget);
+                  setBudgetModalVisible(false);
+                }}
                 outerStyle={styles.confirmModalCancelButton}
                 hoverStyle={styles.confirmModalCancelButtonHover}
               >
@@ -446,11 +572,8 @@ export default function PCRecommendationScreen() {
 
               <HoverableOpacity
                 onPress={() => {
-                  setPreferenceModalVisible(false);
-
-                  // Future: you can add logic here to fine-tune selection
-                  setComponents(recommendedComponents); 
-                  alert('Parts Recommended based on preferences');
+                  setUserBudget(tempBudget);
+                  setBudgetModalVisible(false);
                 }}
                 outerStyle={styles.confirmModalProceedButton}
                 hoverStyle={styles.confirmModalProceedButtonHover}
@@ -462,251 +585,764 @@ export default function PCRecommendationScreen() {
         </View>
       </Modal>
 
+      {/* SET BENCHMARK GOAL */}
+      <Modal
+        transparent={true}
+        visible={benchmarkModalVisible}
+        animationType="fade"
+        onRequestClose={() => setBenchmarkModalVisible(false)}
+      >
+        <View style={styles.preferenceModal}>
+          <View style={styles.preferenceModalContent}>
+            {/* Close Button */}
+            <TouchableOpacity
+              onPress={() => {
+                setTempBenchmark(userBenchmark);
+                setBenchmarkModalVisible(false);
+              }}
+              style={styles.modalCloseButton}
+            >
+              <Text style={styles.modalCloseText}>✕</Text>
+            </TouchableOpacity>
 
+            <View>
+              <Text style={styles.preferenceModalTitle}>Set Benchmark Goal</Text>
+
+              <Text style={styles.preferenceModalLabel}>Benchmark Goal</Text>
+              <TextInput
+                style={styles.input}
+                keyboardType="numeric"
+                placeholder="Enter target benchmark"
+                placeholderTextColor="#9CA3AF"
+                value={tempBenchmark}
+                onChangeText={(text) => {
+                  // Remove any non-digit characters
+                  const numericText = text.replace(/[^0-9]/g, '');
+                  setTempBenchmark(numericText);
+                }}
+              />
+            </View>
+
+            <View style={styles.confirmModalButtonContainer}>
+              <HoverableOpacity
+                onPress={() => {
+                  setTempBenchmark(userBenchmark);
+                  setBenchmarkModalVisible(false);
+                }}
+                outerStyle={styles.confirmModalCancelButton}
+                hoverStyle={styles.confirmModalCancelButtonHover}
+              >
+                <Text style={styles.confirmModalCancelText}>Cancel</Text>
+              </HoverableOpacity>
+
+              <HoverableOpacity
+                onPress={() => {
+                  setUserBenchmark(tempBenchmark)
+                  setBenchmarkModalVisible(false);
+                }}
+                outerStyle={styles.confirmModalProceedButton}
+                hoverStyle={styles.confirmModalProceedButtonHover}
+              >
+                <Text style={styles.confirmModalButtonText}>Confirm</Text>
+              </HoverableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      {/* USER PREFERENCE */}
+      <Modal
+        transparent={true}
+        visible={preferenceModalVisible}
+        animationType="fade"
+        onRequestClose={() => setPreferenceModalVisible(false)}
+      >
+        <View style={styles.preferenceModal}>
+          <View style={styles.preferenceModalContent}>
+            {/* Close Button */}
+            <TouchableOpacity
+              onPress={() => {
+                setTempBudget(userBudget);
+                setPreferenceModalVisible(false);
+              }}
+              style={styles.modalCloseButton}
+            >
+              <Text style={styles.modalCloseText}>✕</Text>
+            </TouchableOpacity>
+            
+            <View>
+              <Text style={styles.preferenceModalTitle}>Build Preferences</Text>
+              <Text style={styles.preferenceModalSubtitle}>Tell us about your ideal build and we'll recommend the best parts.</Text>
+            </View>
+
+            <View>
+              <Text style={styles.preferenceModalLabel}>Budget (₱)</Text>
+              <TextInput
+                style={styles.input}
+                keyboardType="numeric"
+                placeholder="Enter budget"
+                placeholderTextColor="#9CA3AF"
+                value={tempBudget}
+                onChangeText={(text) => {
+                  // Remove any non-digit characters
+                  const numericText = text.replace(/[^0-9]/g, '');
+                  setTempBudget(numericText);
+                }}
+              />
+            </View>
+
+            <View>
+              <Text style={styles.preferenceModalLabel}>Use Case</Text>
+              <View style={styles.preferenceButtonContainer}>
+                {useCaseOptions.map((option) => {
+                const IconComponent = option.icon;
+
+                return (
+                  <TouchableOpacity
+                    key={option.value}
+                    style={[
+                      styles.optionButton,
+                      useCase === option.value && styles.optionButtonSelected
+                    ]}
+                    onPress={() => setUseCase(option.value)}
+                  >
+                    <IconComponent 
+                      size={30} 
+                      strokeWidth={1.5}
+                      color={useCase === option.value ? COLORS.primary : COLORS.textPrimary} 
+                      style={{ marginBottom: 4 }}
+                    />
+                    <Text
+                      style={[
+                        styles.optionButtonText
+                      ]}
+                    >
+                      {option.label}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+              </View>
+            </View>
+
+            <View style={styles.confirmModalButtonContainer}>
+              <HoverableOpacity
+                onPress={() => {
+                  setTempBudget(userBudget);
+                  setPreferenceModalVisible(false);
+                }}
+                outerStyle={styles.confirmModalCancelButton}
+                hoverStyle={styles.confirmModalCancelButtonHover}
+              >
+                <Text style={styles.confirmModalCancelText}>Cancel</Text>
+              </HoverableOpacity>
+
+              <HoverableOpacity
+                onPress={() => {
+                  if (!tempBudget || 0 > tempBudget) {
+                    setBudgetWarningVisible(true);
+                    return;
+                  }
+
+                  if (!useCase) {
+                    setUseCaseWarningVisible(true);
+                    return;
+                  }
+
+                  const recommended = recommendBuild(partOptions, parseInt(tempBudget), useCase);
+                  setComponents(recommended);
+
+                  const { benchmark } = getPreferenceValues(useCase);
+                  setUserBenchmark(benchmark.toString());
+                  setUserBudget(tempBudget);
+
+                  setTimeout(() => {
+                    setIncompatibleParts(checkCompatibility(recommendedComponents));
+                  }, 0);
+                  setPreferenceModalVisible(false);
+                }}
+                outerStyle={styles.confirmModalProceedButton}
+                hoverStyle={styles.confirmModalProceedButtonHover}
+              >
+                <Text style={styles.confirmModalButtonText}>Confirm</Text>
+              </HoverableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal
+        transparent={true}
+        visible={useCaseWarningVisible}
+        animationType="fade"
+        onRequestClose={() => setUseCaseWarningVisible(false)}
+      >
+        <View style={styles.confirmModal}>
+          <View style={styles.confirmModalContent}>
+            <Text style={styles.confirmModalTitle}>No Use Case Selected</Text>
+            <Text style={styles.confirmModalText}>
+              Please select a use case before confirming.
+            </Text>
+            <HoverableOpacity
+              onPress={() => setUseCaseWarningVisible(false)}
+              outerStyle={styles.confirmModalCancelButtonFull}
+              hoverStyle={styles.confirmModalCancelButtonHover}
+            >
+              <Text style={styles.confirmModalCancelText}>Close</Text>
+            </HoverableOpacity>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal
+        transparent={true}
+        visible={budgetWarningVisible}
+        animationType="fade"
+        onRequestClose={() => setBudgetWarningVisible(false)}
+      >
+        <View style={styles.confirmModal}>
+          <View style={styles.confirmModalContent}>
+            <Text style={styles.confirmModalTitle}>No Budget Set</Text>
+            <Text style={styles.confirmModalText}>
+              Please set a budget before confirming.
+            </Text>
+            <HoverableOpacity
+              onPress={() => setBudgetWarningVisible(false)}
+              outerStyle={styles.confirmModalCancelButtonFull}
+              hoverStyle={styles.confirmModalCancelButtonHover}
+            >
+              <Text style={styles.confirmModalCancelText}>Close</Text>
+            </HoverableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SidebarLayout>
   );
 }
 
+export const GRADIENTS = {
+  accent: {
+    colors: ['#3C83F6', '#22D3EE'],
+    start: { x: 0, y: 0 },
+    end: { x: 1, y: 1 },
+  },
+};
+
+const COLORS = {
+  bg: '#F7F8FA',
+  card: '#FFFFFF',
+  textPrimary: '#1A1A1A',
+  textSecondary: '#6B7280',
+  primary: '#3B82F6',
+  primaryTranslucent: '#3b83f61a',
+  primaryHover: '#2563EB',
+  primarySoft: '#DBEAFE',
+  danger: '#EF4444',
+  dangerHover: '#c02d2dff',
+  dangerSoft: '#FEE2E2',
+  success: '#22C55E',
+  successHover: '#16a349ff',
+  border: '#E5E7EB',
+  borderHover: '#d6d9dd',
+};
+
+const SHADOW = {
+  shadowColor: '#000',
+  shadowOpacity: 0.06,
+  shadowRadius: 12,
+  shadowOffset: { width: 0, height: 6 },
+  elevation: 3,
+};
+
 const styles = StyleSheet.create({
   scrollContainer: {
-    padding: 16,
+    padding: 24,
+    backgroundColor: COLORS.bg,
   },
-  header: {
-    fontSize: 26,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: -5,
-    marginVertical: 12,
-  },
-  divider: {
-    height: 1,
-    backgroundColor: '#000',
-    marginVertical: 12,
-    width: '100%',
-  },
+
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    gap: 16,
   },
+
+  maskText: {
+    backgroundColor: 'transparent',
+  },
+
+  transparentText: {
+    opacity: 0,
+  },
+
+  /* ---------- TOP BAR ----------*/
+
+  topBar: {
+    height: 64,
+    paddingHorizontal: 24,
+    backgroundColor: '#FFFFFF',
+
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
+  },
+
+  topBarLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 12,
+  },
+
+  iconWrapper: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: '#EFF6FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  header: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    textAlign: 'center',
+    fontFamily: 'Orbitron, sans-serif',
+  },
+
+  subHeader: {
+    fontSize: 14,
+    color: COLORS.textSecondary,
+    textAlign: 'center',
+    justifyContent: 'center',
+  },
+
+  /* ---------- ACTION BUTTONS ---------- */
+
+  buttonsCard: {
+    backgroundColor: COLORS.card,
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    minWidth: 210,
+    marginBottom: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    ...SHADOW,
+  },
+
+  recommendButton: {
+    backgroundColor: COLORS.primary,
+  },
+
+  recommendButtonHover: {
+    backgroundColor: COLORS.primaryHover,
+  },
+
+  saveButton: {
+    backgroundColor: COLORS.success,
+  },
+
+  saveButtonHover: {
+    backgroundColor: COLORS.successHover,
+  },
+
+  clearButton: {
+    backgroundColor: COLORS.danger,
+  },
+
+  clearButtonHover: {
+    backgroundColor: COLORS.dangerHover,
+  },
+
+  loadButton: {
+    backgroundColor: COLORS.primary,
+  },
+
+  loadButtonHover: {
+    backgroundColor: COLORS.successHover,
+  },
+
+  budgetButton: {
+    backgroundColor: COLORS.success,
+  },
+
+  budgetButtonHover: {
+    backgroundColor: COLORS.successHover,
+  },
+
+  benchmarkButton: {
+    backgroundColor: COLORS.success,
+  },
+
+  benchmarkButtonHover: {
+    backgroundColor: COLORS.successHover,
+  },
+
+  buttonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#FFFFFF',
+  },
+
+  buttonIcon: {
+    fontSize: 16,
+    fontWeight: '100',
+    color: '#FFFFFF',
+    strokeWidth: '1.5',
+  },
+
+  /* ---------- PART CARDS ---------- */
+
+  partsCard: {
+    backgroundColor: COLORS.card,
+    borderRadius: 16,
+    padding: 16,
+    width: 170,
+    minHeight: 220,
+    alignItems: 'center',
+    position: 'relative',
+    ...SHADOW,
+  },
+
+  partsCardFilled: {
+    borderBottomWidth: 4,
+    borderBottomColor: COLORS.primary,
+  },
+
+  partsCardIncompatible: {
+    borderBottomWidth: 4,
+    borderBottomColor: COLORS.danger,
+  },
+
+  partsCardHover: {
+    transform: [{ translateY: -2 }],
+  },
+
+  partsCardHoverIncompatible: {
+    backgroundColor: COLORS.dangerSoft,
+  },
+
+  image: {
+    width: 64,
+    height: 64,
+    marginVertical: 10,
+  },
+
+  label: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: COLORS.textSecondary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    marginTop: 10,
+  },
+
+  pricePlaceholder: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: COLORS.textSecondary,
+    letterSpacing: 0.6,
+    marginTop: 10,
+    fontStyle: 'italic',
+  },
+
+  value: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: COLORS.textPrimary,
+    textAlign: 'center',
+    marginTop: 4,
+  },
+
+  /* ---------- TOTAL PRICE ---------- */
+
+  totalPriceContainer: {
+    backgroundColor: COLORS.card,
+    borderRadius: 16,
+    padding: 18,
+    marginVertical: 24,
+    width: 300,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    ...SHADOW,
+  },
+
+  totalPriceText: {
+    fontSize: 16,
+    color: COLORS.textSecondary,
+  },
+
+  totalPrice: {
+    fontSize: 32,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    fontFamily: "Orbitron, sans-serif",
+  },
+
+  /* ---------- GAUGES ---------- */
+
   gaugeGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginTop: 10,
+    gap: 16,
+    marginTop: 12,
+    marginBottom: 12,
   },
+
   gaugeCard: {
-    backgroundColor: '#00000040',
-    borderRadius: 2.5,
-    borderColor: '#00000080',
-    borderWidth: 1,
-    padding: 12,
-    marginTop: 0,
-    margin: 8,
-    width: '20%',
+    backgroundColor: COLORS.card,
+    borderRadius: 16,
+    padding: 16,
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 2 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 3,
-    minWidth: 160,
+    minWidth: 180,
+    ...SHADOW,
   },
-  partsCard: {
-    backgroundColor: '#00000040',
-    borderRadius: 2.5,
-    borderColor: '#00000080',
-    borderWidth: 1,
-    padding: 12,
-    margin: 8,
-    width: '10%',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 2 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 3,
-    minWidth: 160,
-    minHeight: 220,
-  },
-  partsCardHover: {
-    backgroundColor: '#ffd30540',
-  },
-  buttonsCard: {
-    borderRadius: 5,
-    padding: 12,
-    margin: 8,
-    marginBottom: 20,
-    width: '10%',
-    alignItems: 'center',
-    shadowColor: '#666666',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 1,
-    shadowRadius: 0,
-    minWidth: 160,
-  },
-  buttonText: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    paddingLeft: 10,
-    paddingRight: 10,
-    color: '#333',
-  },
-  saveButton: {
-    backgroundColor: '#81CE65',
-  },
-  saveButtonHover: {
-    backgroundColor: '#b9fba0',
-  },
-  loadButton: {
-    backgroundColor: '#659fce',
-  },
-  loadButtonHover: {
-    backgroundColor: '#a0c9fb',
-  },
-  recommendButton: {
-    backgroundColor: '#FFD305',
-  },
-  recommendButtonHover: {
-    backgroundColor: '#f2e7b3',
-  },
-  clearButton: {
-    backgroundColor: '#ff6961',
-  },
-  clearButtonHover: {
-    backgroundColor: '#ff9893',
-  },
-  image: {
-    width: 70,
-    height: 70,
-  },
-  value: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    color: '#333',
-    marginTop: 6,
-    textAlign: 'center',
-  },
-  label: {
-    fontSize: 14,
-    color: '#444',
-    textAlign: 'center',
-    marginBottom: 6,
-    textAlign: 'center',
-  },
+
   gaugeLabel: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    color: '#444',
-    textAlign: 'center',
-    marginBottom: 6,
-    textAlign: 'center',
+    fontSize: 14,
+    fontWeight: '600',
+    color: COLORS.textSecondary,
+    marginBottom: 8,
   },
-  totalPriceContainer: {
-    alignItems: 'center',
-    alignSelf: 'center',
-    backgroundColor: '#00000040',
-    marginTop: 5,
-    padding: 12,
-    borderRadius: 10,
-    elevation: 2,
-    width: '62%',
-  },
-  totalPrice: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    color: '#444',
-    marginVertical: 4,
-  },
+
+  /* ---------- MODALS ---------- */
+
   confirmModal: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
+
   confirmModalContent: {
-    width: '60%',
-    height: '20%',
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 5,
+    backgroundColor: COLORS.card,
+    borderRadius: 20,
+    padding: 24,
+    width: 420,
+    ...SHADOW,
   },
+
   confirmModalTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 10,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
     textAlign: 'center',
+    marginBottom: 8,
   },
+
   confirmModalText: {
-    fontSize: 16,
-    color: '#444',
+    fontSize: 14,
+    color: COLORS.textSecondary,
     textAlign: 'center',
     marginBottom: 20,
   },
+
   confirmModalButtonContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
     gap: 12,
+    marginTop: 20,
   },
+
   confirmModalProceedButton: {
-    backgroundColor: '#81CE65',
-    paddingVertical: 10,
+    backgroundColor: COLORS.primary,
+    borderRadius: 12,
+    paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    width: '50%',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  confirmModalCancelButton: {
-    backgroundColor: '#ccc',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
+
   confirmModalProceedButtonHover: {
-    backgroundColor: '#b9fba0',
+    backgroundColor: COLORS.primaryHover,
   },
+
+  confirmModalCancelButton: {
+    backgroundColor: COLORS.border,
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    width: '50%',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
   confirmModalCancelButtonHover: {
-    backgroundColor: '#e2e2e2',
+    backgroundColor: COLORS.borderHover,
   },
-  confirmModalButtonText: {
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  confirmModalCancelText: {
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  input: {
-    backgroundColor: '#fff',
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 5,
-    padding: 10,
-    marginVertical: 8,
+
+  confirmModalProceedButtonFull: {
+    backgroundColor: COLORS.border,
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
     width: '100%',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+
+  confirmModalCancelButtonFull: {
+    backgroundColor: COLORS.border,
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    width: '100%',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  confirmModalButtonText: {
+    fontWeight: '600',
+    color: '#FFFFFF',
+    alignItems: 'center',
+  },
+
+  confirmModalProceedText: {
+    fontWeight: '600',
+    color: COLORS.textPrimary,
+    alignItems: 'center',
+  },
+
+  confirmModalCancelText: {
+    fontWeight: '600',
+    color: COLORS.textPrimary,
+    alignItems: 'center',
+  },
+  
+  modalCloseButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10,
+  },
+
+  modalCloseText: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#9c9c9cff',
+  },
+
+  /* ---------- INPUT ---------- */
+
+  input: {
+    backgroundColor: COLORS.card,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    padding: 12,
+    width: '100%',
+    marginVertical: 8,
+  },
+
+  /* ---------- TOOLTIP ---------- */
+
+  tooltip: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: COLORS.danger,
+    padding: 8,
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
+  },
+
+  tooltipText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    textAlign: 'center',
+  },
+
+  /* ---------- PREFERENCE MODAL ---------- */
+
+  
   preferenceModal: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
+
   preferenceModalContent: {
-    width: '40%',
+    width: '25%',
+    minHeight: '25%',
     backgroundColor: '#fff',
     borderRadius: 10,
     padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     elevation: 5,
   },
+
   preferenceModalTitle: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
-    textAlign: 'center',
+    marginBottom: 4,
   },
+
+  preferenceModalSubtitle: {
+    fontSize: 16,
+    color: COLORS.textSecondary,
+    marginBottom: 10,
+  },
+
+  preferenceModalLabel: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    marginTop: 20,
+  },
+
   preferenceSwitch: {
     marginBottom: 20,
+  },
+
+  preferenceButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 8,
+    gap: 8,
+  },
+
+  optionButton: {
+    flex: 1,
+    aspectRatio: 1.5,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    paddingVertical: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  optionButtonSelected: {
+    backgroundColor: COLORS.primaryTranslucent,
+    borderColor: COLORS.primary,
+  },
+
+  optionButtonText: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: COLORS.textPrimary,
   },
 });

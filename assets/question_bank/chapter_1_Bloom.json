@@ -1,0 +1,450 @@
+[
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which component is considered the brain of the computer?",
+    "choices": ["GPU", "HDD", "CPU", "PSU"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "What does RAM stand for?",
+    "choices": ["Random Access Memory", "Read Access Module", "Read Only Module", "Rapid Access Machine"],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "What does ROM stand for?",
+    "answer": "read only memory"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "An anti-static wrist strap is recommended when assembling a computer.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which component converts AC power into DC power?",
+    "choices": ["GPU", "CPU", "Motherboard", "Power Supply Unit"],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which cable is used to connect storage drives to the motherboard?",
+    "choices": ["LAN cable", "SATA cable", "HDMI cable", "VGA cable"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "The main circuit board of the system unit is called the ______.",
+    "answer": "motherboard"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "The CPU can operate without a cooling system.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "What is applied between the processor and heat sink to improve heat transfer?",
+    "choices": ["SSD", "RAM", "Thermal paste", "PSU"],
+    "answer": "c"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which motherboard form factor is commonly used in desktop systems?",
+    "choices": ["ATX", "APU", "DDR4", "CMOS"],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which slot is used for installing RAM modules?",
+    "choices": ["CPU socket", "PCIe slot", "SATA port", "DIMM slot"],
+    "answer": "d"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "PSU stands for ______.",
+    "answer": "power supply unit"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Loose screws inside a computer case can cause short circuits.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which port is used to connect peripherals like mouse and keyboard?",
+    "choices": ["Ethernet port", "USB port", "HDMI port", "VGA port"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "A component used to dissipate heat away from the CPU is called a ______.",
+    "answer": "heat sink"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which component maintains the system clock even when the computer is off?",
+    "choices": ["Chipset", "BIOS", "CMOS battery", "PCI card"],
+    "answer": "c"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Proper cable management improves airflow inside the system unit.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "Which of the following is a type of storage drive?",
+    "choices": ["SSD", "DVD-RW", "HDD", "All of the above"],
+    "answer": "d"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "The diagnostic test performed by the system during startup is called ______.",
+    "answer": "post"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Which component is responsible for rendering graphics?",
+    "choices": ["GPU", "NIC", "HDD", "PSU"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "RAM is a form of permanent storage.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which port is commonly used for older monitors?",
+    "choices": ["HDMI", "VGA", "SATA", "PCI"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "A faster alternative to HDDs with no moving parts is called ______.",
+    "answer": "ssd"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which material can replace thermal paste?",
+    "choices": ["Thermal pad", "Power cable", "SATA cable", "VGA adapter"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "The motherboard should not bend when installing components.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "Which term describes how fast a CPU processes instructions?",
+    "choices": ["3.0 GHz", "2.4 GHz", "1.8 GHz", "Clock speed"],
+    "answer": "d"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "The firmware that initializes hardware during boot is called ______.",
+    "answer": "bios"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which port supports high-resolution displays and audio?",
+    "choices": ["HDMI", "DisplayPort", "Audio jack", "Ethernet jack"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Removing dust from a PC can prevent overheating.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which part is installed on the back of the case to align motherboard ports?",
+    "choices": ["I/O shield", "PCI bracket", "Ventilation grill", "HDD tray"],
+    "answer": "a"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "A PCIe x16 slot is usually used for installing a ______.",
+    "answer": "graphics card"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which connector powers the motherboard?",
+    "choices": ["CMOS", "HDD", "ATX power connector", "Fan header"],
+    "answer": "c"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "SATA power connectors are used to power the CPU.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "The most commonly used tool when assembling a PC is a ______.",
+    "answer": "screwdriver"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Which components can cause a computer not to boot if installed incorrectly?",
+    "choices": ["CPU", "RAM", "SSD", "All of the above"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "A PC must be unplugged before opening the system unit.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Which motherboard part handles communication between CPU, RAM, and GPU?",
+    "choices": ["Chipset", "Northbridge", "Clock generator", "Power regulator"],
+    "answer": "b"
+  },
+  {
+    "type": "fill",
+    "chapter": "chapter1",
+    "bloom": "Knowledge",
+    "question": "Motherboard ______ prevent short circuits by lifting the board off the case.",
+    "answer": "standoff"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Application",
+    "question": "Which header powers case fans?",
+    "choices": ["Fan header", "USB header", "PCI slot", "Audio header"],
+    "answer": "a"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "It is safe to touch motherboard circuits with wet hands.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "An anti-static wrist strap is recommended when assembling a computer.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "The CPU can operate without a cooling system.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "Which of the following is a type of storage drive?",
+    "choices": ["SSD", "DVD-RW", "HDD", "All of the above"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "RAM is a form of permanent storage.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Comprehension",
+    "question": "Which term describes how fast a CPU processes instructions?",
+    "choices": ["3.0 GHz", "2.4 GHz", "1.8 GHz", "Clock speed"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Loose screws inside a computer case can cause short circuits.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "SATA power connectors are used to power the CPU.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Which components can cause a computer not to boot if installed incorrectly?",
+    "choices": ["CPU", "RAM", "SSD", "All of the above"],
+    "answer": "d"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Which motherboard part handles communication between CPU, RAM, and GPU?",
+    "choices": ["Chipset", "Northbridge", "Clock generator", "Power regulator"],
+    "answer": "b"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "Using the wrong tool can damage hardware components.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Analysis",
+    "question": "The motherboard determines which components can be installed.",
+    "answer": "TRUE"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Synthesis",
+    "question": "Which sequence represents a correct internal assembly process?",
+    "choices": ["Install RAM → Install CPU → Mount motherboard","Install CPU → Install RAM → Mount motherboard","Mount motherboard → Install CPU → Install RAM","Install PSU → Install OS → Install CPU"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Synthesis",
+    "question": "Which preparation ensures safe BIOS configuration?",
+    "choices": ["Installing peripherals", "Reviewing system requirements", "Connecting internet", "Installing applications"],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Synthesis",
+    "question": "Which plan BEST prepares a technician for assembly?",
+    "choices": [
+      "Install parts immediately",
+      "Gather tools and review manuals",
+      "Connect peripherals first",
+      "Skip safety procedures"
+    ],
+    "answer": "b"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Which action BEST ensures component longevity?",
+    "choices": ["Following manufacturer guidelines", "Forcing connectors", "Skipping grounding", "Mixing incompatible parts"],
+    "answer": "a"
+  },
+  {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Which power supply feature BEST ensures system safety?",
+    "choices": ["Low wattage", "Generic brand", "Overvoltage protection", "Lightweight casing"],
+    "answer": "c"
+  },
+   {
+    "type": "multiple",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Which practice BEST follows OH&S standards during assembly?",
+    "choices": ["Working on carpeted floors", "Forcing connectors", "Handling parts with wet hands", "Using anti-static protection"],
+    "answer": "d"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "BIOS configuration is unnecessary after hardware assembly.",
+    "answer": "FALSE"
+  },
+  {
+    "type": "truefalse",
+    "chapter": "chapter1",
+    "bloom": "Evaluation",
+    "question": "Skipping preparation steps saves time without risk.",
+    "answer": "FALSE"
+  }
+]

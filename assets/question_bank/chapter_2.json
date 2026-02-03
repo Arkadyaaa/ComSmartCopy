@@ -1,0 +1,356 @@
+[
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter2",
+    "choices": [
+      "Format",
+      "Partition",
+      "Operating System",
+      "Bootloader"
+    ],
+    "question": "What is the main software that manages computer hardware and applications?"
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter2",
+    "choices": [
+      "Driver",
+      "Firmware",
+      "Compiler",
+      "Debugger"
+    ],
+    "question": "What software allows the operating system to communicate with hardware?"
+  },
+  {
+    "type": "fill",
+    "answer": "device manager",
+    "chapter": "chapter2",
+    "question": "Which Windows utility displays installed hardware and drivers? ______"
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "A clean installation removes all existing files and settings."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter2",
+    "choices": [
+      "NTFS",
+      "FAT32",
+      "exFAT",
+      "RAW"
+    ],
+    "question": "Which file system is commonly used for USB drives?"
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "SSD",
+      "HDD",
+      "RAM",
+      "Installation media"
+    ],
+    "question": "A bootable USB is an example of ______."
+  },
+  {
+    "type": "fill",
+    "answer": "formatting",
+    "chapter": "chapter2",
+    "question": "The process of preparing a storage device for OS installation is called ______."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter2",
+    "question": "Drivers are optional and not required for hardware to work."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter2",
+    "choices": [
+      "BIOS",
+      "Task Manager",
+      "Registry Editor",
+      "Control Panel"
+    ],
+    "question": "Which system is used to set the boot order before installation?"
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter2",
+    "choices": [
+      "SSD",
+      "HDD",
+      "Installation Wizard",
+      "USB Hub"
+    ],
+    "question": "Windows setup uses what tool to guide users during installation?"
+  },
+  {
+    "type": "fill",
+    "answer": "product key",
+    "chapter": "chapter2",
+    "question": "Windows activation requires a valid ______."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "A 64-bit OS can support more memory than a 32-bit OS."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "LAN",
+      "POST",
+      "BIOS clock",
+      "UEFI"
+    ],
+    "question": "Which is the modern replacement for BIOS?"
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter2",
+    "choices": [
+      "Recovery mode",
+      "Safe mode",
+      "Boot menu",
+      "Admin panel"
+    ],
+    "question": "Which startup mode loads the OS with minimal drivers?"
+  },
+  {
+    "type": "fill",
+    "answer": "partition",
+    "chapter": "chapter2",
+    "question": "A section of a storage drive created for installation is called a ______."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "A corrupted driver can cause hardware malfunction."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter2",
+    "choices": [
+      "Windows Update",
+      "Registry Editor",
+      "Disk Cleanup",
+      "CMD"
+    ],
+    "question": "Which service can automatically install missing drivers?"
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter2",
+    "choices": [
+      "MBR",
+      "FAT",
+      "NTFS",
+      "EXT4"
+    ],
+    "question": "Which file system is recommended for Windows installation?"
+  },
+  {
+    "type": "fill",
+    "answer": "boot order",
+    "chapter": "chapter2",
+    "question": "Changing the ______ in BIOS lets the system boot from USB or DVD."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "CMD",
+      "Recovery drive",
+      "UEFI settings",
+      "All of the above"
+    ],
+    "question": "Which tools can help repair startup issues?"
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter2",
+    "question": "An OS can be installed without storage devices."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter2",
+    "choices": [
+      "Disk Cleanup",
+      "Defragmentation",
+      "Disk Partitioning",
+      "Firewall"
+    ],
+    "question": "Which process divides a hard drive into logical sections?"
+  },
+  {
+    "type": "fill",
+    "answer": "setup.exe",
+    "chapter": "chapter2",
+    "question": "Windows installation begins by running ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter2",
+    "choices": [
+      "FAT",
+      "MBR",
+      "NTFS",
+      "RAW"
+    ],
+    "question": "Which drive format uses the traditional boot record system?"
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "A driver update can improve hardware performance."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter2",
+    "choices": [
+      "Manufacturer’s website",
+      "Task Manager",
+      "File Explorer",
+      "Notepad"
+    ],
+    "question": "Where is the safest source for downloading drivers?"
+  },
+  {
+    "type": "fill",
+    "answer": "bootable usb",
+    "chapter": "chapter2",
+    "question": "A USB configured for OS installation is called a ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "Windows Explorer",
+      "Memory Diagnostics Tool",
+      "Disk Manager",
+      "Recovery Mode"
+    ],
+    "question": "Which feature helps restore the OS during failures?"
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "Installing the wrong driver can cause system instability."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter2",
+    "choices": [
+      "Android",
+      "iOS",
+      "Linux",
+      "MS-DOS"
+    ],
+    "question": "Ubuntu is an example of what operating system?"
+  },
+  {
+    "type": "fill",
+    "answer": "control panel",
+    "chapter": "chapter2",
+    "question": "Most driver settings in Windows can be viewed from ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "UEFI",
+      "POST",
+      "CMOS",
+      "BIOS setup"
+    ],
+    "question": "Where can the system time and date be adjusted before boot?"
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter2",
+    "question": "Drivers never need updates after installation."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter2",
+    "choices": [
+      "SSD",
+      "Installer ISO",
+      "PSU",
+      "GPU"
+    ],
+    "question": "What file format is commonly used for OS installation images?"
+  },
+  {
+    "type": "fill",
+    "answer": "administrator",
+    "chapter": "chapter2",
+    "question": "Installing software often requires ______ privileges."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter2",
+    "choices": [
+      "Windows Recovery Environment",
+      "Disk Analyzer",
+      "Firewall",
+      "Screensaver"
+    ],
+    "question": "What tool assists in repairing boot issues?"
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter2",
+    "question": "Linux distributions can be installed using a bootable USB."
+  },
+  {
+    "type": "fill",
+    "answer": "license agreement",
+    "chapter": "chapter2",
+    "question": "During installation, users must accept a ______ to proceed."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter2",
+    "choices": [
+      "FAT32",
+      "SWAP",
+      "EXT2",
+      "EXT4"
+    ],
+    "question": "Which file system is commonly used in Linux installations?"
+  }
+]

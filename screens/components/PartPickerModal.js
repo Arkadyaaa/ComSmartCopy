@@ -39,7 +39,7 @@ export default function PartPickerModal({
   };
 
   const handleSelect = (item) => {
-    onSelect(item);
+    onSelect(selectedPart.label, item);
     handleClose();
   };
 

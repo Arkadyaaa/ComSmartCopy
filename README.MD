@@ -60,7 +60,7 @@ npm start
 This will launch the Expo development server, and you can run the app on an Android or iOS simulator, or on a physical device using the Expo Go app.
 
 ## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Contributions are only allowed by  COMSMART members and defense panelists & adviser
 
 ## License
 This project is licensed under the MIT License.

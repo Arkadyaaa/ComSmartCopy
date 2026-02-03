@@ -1,0 +1,401 @@
+[
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter3",
+    "choices": [
+      "Firmware",
+      "Device driver",
+      "Application software",
+      "Utility service"
+    ],
+    "question": "It refers to programs designed to help users perform specific tasks such as word processing or spreadsheet calculations."
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter3",
+    "choices": [
+      "Executable file",
+      "Installer package",
+      "System registry",
+      "Program directory"
+    ],
+    "question": "A file format like .exe or .msi used for installing software is called a ____."
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter3",
+    "choices": [
+      "EULA",
+      "BIOS",
+      "MBR",
+      "SATA"
+    ],
+    "question": "Before installing software, the user must read and accept the ______ which defines the terms of software use."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "Auto-run",
+      "Quick setup",
+      "Express mode",
+      "Custom installation"
+    ],
+    "question": "Which installation type allows the user to choose components, directory, and configuration settings?"
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter3",
+    "choices": [
+      "System requirements",
+      "Changelog",
+      "License certificate",
+      "Patch notes"
+    ],
+    "question": "Before installation, users must check the software's ______ to ensure compatibility with the hardware and OS."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter3",
+    "choices": [
+      "User profiles",
+      "Local policies",
+      "System registry",
+      "System volume"
+    ],
+    "question": "Important configuration settings of installed applications in Windows are stored in the ____."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "Application logs",
+      "Installation path",
+      "Administrative mode",
+      "All of the above"
+    ],
+    "question": "A software installation may fail if which of the following is incorrect?"
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter3",
+    "choices": [
+      "Services",
+      "Updates",
+      "Backup",
+      "Storage"
+    ],
+    "question": "Software patches that fix bugs, improve security, or add new features are called ____."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter3",
+    "choices": [
+      "Reinstallation",
+      "Overclocking",
+      "Formatting",
+      "BIOS flashing"
+    ],
+    "question": "If an application becomes corrupted or missing essential files, the best solution is usually a ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "Operating system",
+      "Motherboard chipset",
+      "BIOS version",
+      "Software license"
+    ],
+    "question": "The legal permission to use a software product is called a ____."
+  },
+
+  {
+    "type": "fill",
+    "answer": "malware",
+    "chapter": "chapter3",
+    "question": "A harmful program designed to damage or disrupt system operations is called ______."
+  },
+  {
+    "type": "fill",
+    "answer": "version",
+    "chapter": "chapter3",
+    "question": "The number that identifies the release level of software is called its ______."
+  },
+  {
+    "type": "fill",
+    "answer": "file associations",
+    "chapter": "chapter3",
+    "question": "Windows uses ______ to determine which application opens a particular file type."
+  },
+  {
+    "type": "fill",
+    "answer": "installation path",
+    "chapter": "chapter3",
+    "question": "The folder where a program's executable and resources are stored is called the ______."
+  },
+  {
+    "type": "fill",
+    "answer": "activation key",
+    "chapter": "chapter3",
+    "question": "Some licensed applications require an ______ to unlock full features after installation."
+  },
+
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "Application software must meet hardware and OS requirements to install successfully."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter3",
+    "question": "A software installer cannot modify system registry entries."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "Cracked or pirated software may expose a computer to security threats."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter3",
+    "question": "Updating software is optional and does not improve security."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "Some applications require administrator privileges to install properly."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter3",
+    "choices": [
+      "Temp folder",
+      "Program Files",
+      "Users directory",
+      "System32"
+    ],
+    "question": "Where are most applications installed by default in Windows?"
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter3",
+    "choices": [
+      "Repair",
+      "Refresh",
+      "Rollback",
+      "Reboot"
+    ],
+    "question": "Which installation option fixes missing or corrupted program files without reinstalling everything?"
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter3",
+    "choices": [
+      "RAM",
+      "GPU",
+      "Disk space",
+      "Network cable"
+    ],
+    "question": "A software installation may fail if the system does not have enough ____."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "System backup",
+      "Configured firewall",
+      "USB installer",
+      "Package manager"
+    ],
+    "question": "Linux typically installs applications using a ______ like apt or yum."
+  },
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter3",
+    "choices": [
+      "Defragmentation",
+      "Safe mode",
+      "Silent installation",
+      "Dual-booting"
+    ],
+    "question": "An installation method that requires no user interaction and hides prompts is called ______."
+  },
+
+  {
+    "type": "fill",
+    "answer": "application logs",
+    "chapter": "chapter3",
+    "question": "Errors that occur during installation are recorded in the ______."
+  },
+  {
+    "type": "fill",
+    "answer": "dependencies",
+    "chapter": "chapter3",
+    "question": "Some programs require additional components such as .NET Framework which are called ______."
+  },
+  {
+    "type": "fill",
+    "answer": "msi",
+    "chapter": "chapter3",
+    "question": "A Windows Installer package file often ends with the extension ______."
+  },
+  {
+    "type": "fill",
+    "answer": "portable",
+    "chapter": "chapter3",
+    "question": "A type of application that runs without installation is called ______ software."
+  },
+  {
+    "type": "fill",
+    "answer": "backup",
+    "chapter": "chapter3",
+    "question": "Before installing major applications, it is recommended to create a system ______."
+  },
+
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "A corrupted installer file may cause incomplete or failed installation."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter3",
+    "question": "Disabling antivirus is always required when installing new software."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "Software installation logs help diagnose failed installations."
+  },
+  {
+    "type": "truefalse",
+    "answer": "FALSE",
+    "chapter": "chapter3",
+    "question": "All software automatically updates without user permission."
+  },
+  {
+    "type": "truefalse",
+    "answer": "TRUE",
+    "chapter": "chapter3",
+    "question": "Open-source applications can be installed without paying for licenses."
+  },
+
+  {
+    "type": "multiple",
+    "answer": "c",
+    "chapter": "chapter3",
+    "choices": [
+      "UEFI",
+      "Cache memory",
+      "Antivirus program",
+      "Modem"
+    ],
+    "question": "What software helps prevent malicious programs from affecting newly installed applications?"
+  },
+  {
+    "type": "multiple",
+    "answer": "a",
+    "chapter": "chapter3",
+    "choices": [
+      "Control Panel",
+      "Recycle Bin",
+      "Task Manager",
+      "BIOS"
+    ],
+    "question": "Uninstalling applications in Windows is typically done through the ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "RAM upgrade",
+      "Video card replacement",
+      "CPU overclock",
+      "Software update"
+    ],
+    "question": "What is a recommended step to improve application performance?"
+  },
+  {
+    "type": "multiple",
+    "answer": "b",
+    "chapter": "chapter3",
+    "choices": [
+      "Compatibility tool",
+      "Virtual machine",
+      "File recovery tool",
+      "Boot manager"
+    ],
+    "question": "Old software that does not run on modern OS versions can sometimes be installed using a ______."
+  },
+  {
+    "type": "multiple",
+    "answer": "d",
+    "chapter": "chapter3",
+    "choices": [
+      "Terminate process",
+      "Restart Windows",
+      "Disable firewall",
+      "Run as administrator"
+    ],
+    "question": "If an application cannot install due to permission issues, you should ______."
+  },
+
+  {
+    "type": "fill",
+    "answer": "patch",
+    "chapter": "chapter3",
+    "question": "A small update designed to fix bugs or security issues is called a ______."
+  },
+  {
+    "type": "fill",
+    "answer": "software bundle",
+    "chapter": "chapter3",
+    "question": "An installer that contains multiple combined applications is called a ______."
+  },
+  {
+    "type": "fill",
+    "answer": "trial version",
+    "chapter": "chapter3",
+    "question": "A time-limited edition of software that requires purchase for full use is a ______."
+  },
+  {
+    "type": "fill",
+    "answer": "digital signature",
+    "chapter": "chapter3",
+    "question": "Installers use a ______ to verify authenticity and prevent tampering."
+  },
+  {
+    "type": "fill",
+    "answer": "system restore point",
+    "chapter": "chapter3",
+    "question": "Windows creates a ______ before major installations to enable rollback."
+  }
+]

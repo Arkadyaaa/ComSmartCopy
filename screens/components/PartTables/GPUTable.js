@@ -13,6 +13,7 @@ export default function GpuTable({ options, onSelect, formatPrice }) {
       <Text style={styles.cell}>{item.chipset || '—'}</Text>
       <Text style={styles.cell}>{item.vram + " GB" || '—'}</Text>
       <Text style={styles.cell}>{item.tdp + "W" || '—'}</Text>
+      <Text style={styles.cell}>{item.benchmark || '—'}</Text>
       <Text style={styles.cell}>{formatPrice(item.price) || '—'}</Text>
     </HoverableOpacity>
   );
@@ -24,6 +25,7 @@ export default function GpuTable({ options, onSelect, formatPrice }) {
         <Text style={styles.cellHeader}>Chipset</Text>
         <Text style={styles.cellHeader}>VRAM</Text>
         <Text style={styles.cellHeader}>TDP</Text>
+        <Text style={styles.cellHeader}>Benchmark Score</Text>
         <Text style={styles.cellHeader}>Price</Text>
       </View>
       <FlatList

@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, Pressable, ScrollView, Dimensions } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import supabase from '../../services/supabase';
+import { LinearGradient } from 'expo-linear-gradient';
+import { House, BookText, ChartBar, PcCase, CircleUser, CircleQuestionMark, Bell, LogOut } from 'lucide-react';
 
 const NAV_ITEMS = [
-  { label: 'Dashboard', route: 'Dashboard', icon: '🏠' },
-  { label: 'Learning Materials', route: 'LearningMaterials', icon: '📖' },
-  { label: 'Assessment', route: 'Assessment', icon: '📊' },
-  { label: 'PC Recommendation', route: 'PCRecommendation', icon: '💻' },
+  { label: 'Dashboard', route: 'Dashboard', icon: House },
+  { label: 'Learning Materials', route: 'LearningMaterials', icon: BookText },
+  { label: 'Assessment', route: 'Assessment', icon: ChartBar },
+  { label: 'PC Recommendation', route: 'PCRecommendation', icon: PcCase },
 ];
 
 const BOTTOM_ITEMS = [
-  { label: 'User Account', route: 'UserAccount', icon: '👤' },
-  { label: 'Help', route: 'Help', icon: '❓' },
-  { label: 'Notification', route: 'Notification', icon: '🔔' },
+  { label: 'User Account', route: 'UserAccount', icon: CircleUser },
+  { label: 'Help', route: 'Help', icon: CircleQuestionMark },
+  { label: 'Notification', route: 'Notification', icon: Bell },
 ];
 
 export default function SidebarLayout({ activeTab, children }) {
@@ -29,22 +33,47 @@ export default function SidebarLayout({ activeTab, children }) {
     navigation.navigate(item.route, { user });
   };
 
-  const handleLogout = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Login' }],
-    });
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem('userData');
+      await AsyncStorage.removeItem('noAuth');
+      await AsyncStorage.removeItem('role');
+      try {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem('noAuth');
+          localStorage.removeItem('role');
+        }
+      } catch (_) {}
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Login' }],
+      });
+    } catch (error) {
+      console.error('Error during logout:', error);
+      alert('Error logging out. Please try again.');
+    }
   };
 
   return (
     <View style={styles.wrapper}>
       {/* Sidebar */}
       <View style={[styles.sidebar, { width: sidebarWidth }]}>
+
         {/* Logo and Title */}
         <View style={styles.logoRow}>
+          <LinearGradient
+            colors={['#22D3EE', '#3C83F6']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={[StyleSheet.absoluteFill]}
+          />
+
           <Image source={require('../../assets/cosmart_logo_white.png')} style={styles.logo} />
           {sidebarWidth > 120 && <Text style={styles.title}>CO-SMART</Text>}
         </View>
+
         {/* User Info */}
         <View style={styles.userSection}>
           <View style={styles.userImagePlaceholder}>
@@ -61,9 +90,12 @@ export default function SidebarLayout({ activeTab, children }) {
             </>
           )}
         </View>
+
         {/* Navigation */}
         <View style={styles.navSection}>
-          {NAV_ITEMS.map((item) => (
+          {NAV_ITEMS.map((item) => {
+          const Icon = item.icon;
+          return (
             <Pressable
               key={item.label}
               onPress={() => handleNav(item)}
@@ -73,14 +105,17 @@ export default function SidebarLayout({ activeTab, children }) {
                 pressed && styles.navItemPressed,
               ]}
             >
-              <Text style={styles.navIcon}>{item.icon}</Text>
+              <Icon size={20} color="#22D3EE" style={{ marginRight: 12 }} /> 
               {sidebarWidth > 120 && <Text style={styles.navLabel}>{item.label}</Text>}
             </Pressable>
-          ))}
+          )})}
         </View>
+
         {/* Bottom Section */}
         <View style={styles.bottomSection}>
-          {BOTTOM_ITEMS.map((item) => (
+          {BOTTOM_ITEMS.map((item) => {
+          const Icon = item.icon;
+          return (
             <Pressable
               key={item.label}
               onPress={() => handleNav(item)}
@@ -90,10 +125,10 @@ export default function SidebarLayout({ activeTab, children }) {
                 pressed && styles.navItemPressed,
               ]}
             >
-              <Text style={styles.navIcon}>{item.icon}</Text>
+              <Icon size={20} color="#22D3EE" style={{ marginRight: 12 }} />
               {sidebarWidth > 120 && <Text style={styles.navLabel}>{item.label}</Text>}
             </Pressable>
-          ))}
+          )})}
           <Pressable
             onPress={handleLogout}
             style={({ pressed }) => [
@@ -102,11 +137,12 @@ export default function SidebarLayout({ activeTab, children }) {
               { marginTop: 16, borderTopWidth: 1, borderTopColor: '#444' }
             ]}
           >
-            <Text style={styles.navIcon}>🚪</Text>
+            <LogOut size={20} color="#22D3EE" style={{ marginRight: 12 }}/>
             {sidebarWidth > 120 && <Text style={styles.navLabel}>Log Out</Text>}
           </Pressable>
         </View>
       </View>
+      
       {/* Main Content */}
       <View style={styles.content}>
         <ScrollView contentContainerStyle={styles.contentInner}>
@@ -134,15 +170,15 @@ const styles = StyleSheet.create({
   logoRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFD600',
+    backgroundColor: '#38598b',
     paddingVertical: 10,
     paddingHorizontal: 10,
   },
   logo: {
-    width: 32,
-    height: 32,
+    width: 44,
+    height: 44,
     resizeMode: 'contain',
-    marginRight: 8,
+    marginLeft: '14px',
   },
   title: {
     color: '#fff',
@@ -196,10 +232,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   navItemActive: {
-    backgroundColor: '#FFD600',
+    backgroundColor: '#5585b581',
   },
   navItemPressed: {
-    backgroundColor: '#ffe066',
+    backgroundColor: '#5585b5c9',
   },
   navIcon: {
     fontSize: 20,
@@ -222,12 +258,12 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     position: 'relative',
-    overflow: 'hidden', // Add this to contain scrolling
-    height: '100vh', // Add fixed height
+    overflow: 'hidden', 
+    height: '100vh', 
   },
   contentInner: {
     flexGrow: 1,
-    height: '100%', // Add this
-    overflow: 'auto', // Add this
+    height: '100%', 
+    overflow: 'auto', 
   },
 });
